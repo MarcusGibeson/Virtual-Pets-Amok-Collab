@@ -37,7 +37,7 @@ public class PetShelter {
     /*
      * Removes a specific pet
      */
-    public adoptPet (Integer petID) throws Exception {
+    public void adoptPet (Integer petID) throws Exception {
         if (shelterAnimals.containsKey(petID)) {
             shelterAnimals.remove(petID);
         } else {
