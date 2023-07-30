@@ -26,7 +26,7 @@ public class PetShelter {
     /*
      * Returns a specific pet
      */
-    public VirtualPet getPet(Integer petID) throws Exception {
+    public Pet getPet(Integer petID) throws Exception {
         if (shelterAnimals.containsKey(petID)) {
             return shelterAnimals.get(petID);
         } else {
