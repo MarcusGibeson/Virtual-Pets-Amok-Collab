@@ -1,3 +1,5 @@
+package virtual.pets.amok;
+
 public class Shelter {
     private String name;
     private String oil;
