@@ -23,7 +23,27 @@ public class PetShelter {
         }
     }
 
-    //random text
+    /*
+     * Returns a specific pet
+     */
+    public VirtualPet getPet(Integer petID) throws Exception {
+        if (shelterAnimals.containsKey(petID)) {
+            return shelterAnimals.get(petID);
+        } else {
+            throw new Exception ("That pet does not exist in the shelter!");
+        }
+    }
+
+    /*
+     * Removes a specific pet
+     */
+    public adoptPet (Integer petID) throws Exception {
+        if (shelterAnimals.containsKey(petID)) {
+            shelterAnimals.remove(petID);
+        } else {
+            throw new Exception("That pet does not exist in the shelter!");
+        }
+    }
 
 
     
