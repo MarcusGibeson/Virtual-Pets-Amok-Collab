@@ -1,6 +1,6 @@
 package virtual.pets.amok;
 
-public class Shelter {
+public class Pet {
     private String name;
     private String oil;
     private String recharge;
@@ -9,7 +9,7 @@ public class Shelter {
     private String waste;
     private String play;
 
-    public Shelter(String name, String oil, String recharge, String feed, String waste, String play) {
+    public Pet(String name, String oil, String recharge, String feed, String waste, String play) {
         this.oil = oil;
         this.recharge = recharge;
         this.feed = feed;
