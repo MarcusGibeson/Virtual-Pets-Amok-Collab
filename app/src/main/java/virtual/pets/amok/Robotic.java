@@ -8,6 +8,7 @@ public class Robotic {
     private boolean clean;
 
 
+<<<<<<< HEAD
 
 
 
@@ -15,6 +16,8 @@ public class Robotic {
 
     }
 
+=======
+>>>>>>> Robotic-Class
     
     public String getName() {
         return name;
@@ -74,4 +77,12 @@ public class Robotic {
         this.clean = clean;
     }
 
+<<<<<<< HEAD
+=======
+
+
+    public  Robotic(String name, int oil, int charge ){
+
+    }
+>>>>>>> Robotic-Class
 }
