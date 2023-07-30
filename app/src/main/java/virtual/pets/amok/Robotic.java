@@ -7,7 +7,12 @@ public class Robotic {
     private boolean repair;
     private boolean clean;
 
+    public  Robotic(String name, int oil, int charge ){
+        this.name = name;
+        this.oil = oil;
+        this.charge = charge;
 
+    }
     
     public String getName() {
         return name;
@@ -69,7 +74,5 @@ public class Robotic {
 
 
 
-    public  Robotic(String name, int oil, int charge ){
 
-    }
 }
