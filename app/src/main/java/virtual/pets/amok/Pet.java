@@ -5,6 +5,7 @@ public class Pet {
     private String oil;
     private String recharge;
     private String feed;
+    private String thirst;
     private String waste;
     private String play;
 
