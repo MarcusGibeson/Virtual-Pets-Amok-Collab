@@ -1,18 +1,17 @@
 package virtual.pets.amok;
 
-public class Robotic extends Pet{
+public class Robotic {
     private int oil;
     private int charge;
     private boolean repair;
     private boolean clean;
 
     public Robotic(int oil, int charge) {
-        this.name = name;
+        // this.name = name;
         this.oil = oil;
         this.charge = charge;
-        this.petId = petId;
+        // this.petId = petId;
     }
-
 
     public int getOil() {
         return oil;
@@ -46,9 +45,31 @@ public class Robotic extends Pet{
         this.clean = clean;
     }
 
+    //method for clean and repair
+public boolean needClean(int oil,boolean clean){
+    this.oil = oil;
+    this.clean = clean;
+    if(oil<=20){
+        clean = false;
+        return clean;
+    }
+    clean = true;
+    return clean;
+}
+public boolean needRepair(int charge,boolean repair){
+    this.charge = charge;
+    this.repair = repair;
+    if(charge<=20){
+        repair = false;
+        return repair;
+    }
+    repair = true;
+    return repair;
+}
+
 @Override
-public String toString(getOil(), isClean(),getCharge(), isRepair()){
-    return "Still coding";
+public String toString(){
+    return (getOil()+""+ isClean()+""+getCharge()+" "+ isRepair()+"Still coding");
 }
 
 }
