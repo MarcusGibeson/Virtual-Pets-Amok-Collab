@@ -1,25 +1,18 @@
 package virtual.pets.amok;
 
 public class Robotic extends Pet{
-    private String name;
     private int oil;
     private int charge;
     private boolean repair;
     private boolean clean;
 
-    public Robotic(String name, int oil, int charge) {
+    public Robotic(int oil, int charge) {
         this.name = name;
         this.oil = oil;
         this.charge = charge;
+        this.petId = petId;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public int getOil() {
         return oil;
@@ -54,7 +47,7 @@ public class Robotic extends Pet{
     }
 
 @Override
-public String toString(){
+public String toString(getOil(), isClean(),getCharge(), isRepair()){
     return "Still coding";
 }
 
