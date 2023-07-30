@@ -1,13 +1,13 @@
 package virtual.pets.amok;
 
-public class Pet {
+public class PetLive {
     private String name;
     private int feed;
     private int waste;
     private int play;
     private int petID;
 
-    public Pet(String name, int feed, int waste, int play) {
+    public PetLive(String name, int feed, int waste, int play) {
         this.feed = feed;
         this.waste = waste;
         this.play = play;
@@ -28,7 +28,7 @@ public class Pet {
         return feed;
     }
 
-    public void setFeed(String feed) {
+    public void setFeed(int feed) {
         this.feed = feed;
     }
 
@@ -36,7 +36,7 @@ public class Pet {
         return waste;
     }
 
-    public void setWaste(String waste) {
+    public void setWaste(int waste) {
         this.waste = waste;
     }
 
@@ -44,7 +44,7 @@ public class Pet {
         return play;
     }
 
-    public void setPlay(String play) {
+    public void setPlay(int play) {
         this.play = play;
     }
 
