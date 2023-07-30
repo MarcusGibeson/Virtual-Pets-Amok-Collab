@@ -2,19 +2,21 @@ package virtual.pets.amok;
 
 public class Pet {
     private String name;
-    private String oil;
-    private String recharge;
-    private String feed;
-    private String waste;
-    private String play;
+    private int oil;
+    private int recharge;
+    private int feed;
+    private int waste;
+    private int play;
+    private int petID;
 
-    public Pet(String name, String oil, String recharge, String feed, String waste, String play) {
+    public Pet(String name, int oil, int recharge, int feed, int waste, int play) {
         this.oil = oil;
         this.recharge = recharge;
         this.feed = feed;
         this.waste = waste;
         this.play = play;
         this.name = name;
+        this.petID = petCounter++;
     }
 
     public String getName() {
