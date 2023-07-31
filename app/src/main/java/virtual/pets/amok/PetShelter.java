@@ -8,18 +8,18 @@ public class PetShelter {
     /*
      * Create a hashmap of robots and live pets
      */
-    Map <Integer, Pet> shelterAnimals = new HashMap<Integer, Pet>();
+    Map<Integer, Pet> shelterAnimals = new HashMap<Integer, Pet>();
     Scanner input = new Scanner(System.in);
-    
+
     /*
      * Adds pet to shelter
      */
 
     public void addPet(Pet VirtualPet) throws Exception {
-        if(!shelterAnimals.containsKey(VirtualPet.getPetID())) {
+        if (!shelterAnimals.containsKey(VirtualPet.getPetID())) {
             shelterAnimals.put(VirtualPet.getPetID(), VirtualPet);
         } else {
-            throw new Exception ("Invalid name");
+            throw new Exception("Invalid name");
         }
     }
 
@@ -30,24 +30,19 @@ public class PetShelter {
         if (shelterAnimals.containsKey(petID)) {
             return shelterAnimals.get(petID);
         } else {
-            throw new Exception ("That pet does not exist in the shelter!");
+            throw new Exception("That pet does not exist in the shelter!");
         }
     }
 
     /*
      * Removes a specific pet
      */
-    public void adoptPet (Integer petID) throws Exception {
+    public void adoptPet(Integer petID) throws Exception {
         if (shelterAnimals.containsKey(petID)) {
             shelterAnimals.remove(petID);
         } else {
             throw new Exception("That pet does not exist in the shelter!");
         }
     }
-
-
-    
-
-
 
 }
