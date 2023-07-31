@@ -7,9 +7,7 @@ public class Pet {
 
 
     public Pet(String name, int oil, int recharge) {
-        this.feed = feed;
-        this.waste = waste;
-        this.play = play;
+        this.oil = oil;
         this.name = name;
         this.petID = petCounter++;
     }
@@ -37,3 +35,4 @@ public class Pet {
     public void setOil(String oil) {
         this.oil = oil;
     }
+}
