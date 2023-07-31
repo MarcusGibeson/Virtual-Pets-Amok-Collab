@@ -1,18 +1,18 @@
 package virtual.pets.amok;
 
-public class PetLive {
+public class PetLive { //this should extend Pet
     private String name;
     private int feed;
     private int waste;
     private int play;
-    private int petID;
+    private int petID; // this should be in Pet with Getters and Setters
 
     public PetLive(String name, int feed, int waste, int play) {
         this.feed = feed;
         this.waste = waste;
         this.play = play;
         this.name = name;
-        this.petID = petCounter++;
+        this.petID = petCounter++; // this should be in Pet constructor
     }
 
     public String getName() {
