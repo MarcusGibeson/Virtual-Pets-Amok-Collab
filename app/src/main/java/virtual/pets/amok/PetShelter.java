@@ -35,6 +35,15 @@ public class PetShelter {
     }
 
     /*
+     * Returns a collection of pets
+     */
+    public void showAllPets() {
+        for (Integer pet : shelterAnimals.keySet()) {
+            System.out.println(shelterAnimals.get(pet));
+        }
+    }
+    
+    /*
      * Removes a specific pet
      */
     public void adoptPet (Integer petID) throws Exception {

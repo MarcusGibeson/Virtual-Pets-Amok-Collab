@@ -1,10 +1,34 @@
 package virtual.pets.amok;
 //driver class to put all application work inside
 public class PetDriver {
-    public void driver() {
-    /*
+  /*
      * creates the HashMap
      */
-    VirtualPetShelter PetShelter = new VirtualPetShelter();
+    PetShelter PetShelter = new PetShelter();
+    Scanner input = new Scanner(System.in);
+
+    /*
+     * Starts the game loop
+     */
+    public void driver() {
+        
+            boolean exitGameLoop = false;
+            Menus menu = new Menus();
+
+            /*
+             * Creates starting pets in shelter (1 of each)
+             */
+            PetRobot Robodog = new PetRobot(robotDog);
+            PetRobot Meowotron = new PetRobot(robotCat);
+            Dog Spot = new Dog(dog);
+            Cat DonFluffles = new Cat(cat);
+
+            PetShelter.addPet(Robodog);
+            PetShelter.addPet(Meowotron);
+            PetShelter.addPet(Spot);
+            PetShelter.addPet(Tiger);
+            
+            PetShelter.showAllpets();
+
     }
 }
