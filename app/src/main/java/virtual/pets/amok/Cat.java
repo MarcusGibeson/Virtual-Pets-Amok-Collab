@@ -16,7 +16,7 @@ public class Cat extends PetLive {
     }
 
     public Cat(String name,String description, int feed, int waste, int play, int literBox) {
-        super(name, description, 50, 50, 50); //Need to add "description" on pet class  
+        super(name, description, feed, waste, play); //Need to add "description" on pet class  
         this.literBox = literBox;
 
     }
