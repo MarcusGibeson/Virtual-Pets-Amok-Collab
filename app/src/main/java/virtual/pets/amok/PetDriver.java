@@ -20,8 +20,8 @@ public class PetDriver {
              */
             PetRobot Robodog = new PetRobot(robotDog);
             PetRobot Meowotron = new PetRobot(robotCat);
-            Dog Spot = new Dog(dog);
-            Cat DonFluffles = new Cat(cat);
+            Dog Spot = new Dog("dog", "brown dog", 75, 75, 75, 75);
+            Cat DonFluffles = new Cat("cat", "black cat", 75, 75, 75, 75);
 
             PetShelter.addPet(Robodog);
             PetShelter.addPet(Meowotron);
