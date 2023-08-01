@@ -1,6 +1,6 @@
 package virtual.pets.amok;
 
-public class PetLive { //this should extend Pet
+public class PetLive extends pet { //this should extend Pet
     private String name;
     private int feed;
     private int waste;

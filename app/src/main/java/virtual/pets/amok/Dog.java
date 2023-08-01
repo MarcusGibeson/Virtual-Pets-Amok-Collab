@@ -1,6 +1,5 @@
 package virtual.pets.amok;
 
-//dog class extending live pet for cage cleaning
 public class Dog extends PetLive {
     /*
      * Adding Clean cage to the dog's super constructor.
@@ -16,9 +15,8 @@ public class Dog extends PetLive {
         this.cleanCage = cleanCage;
     }
 
-    // Need description added to pet, so I can add it here
     public Dog(String name, int feed, int waste, int play, int cleanCage) {
-        super(name, 50, 50, 50);
+        super(name, 100, 100, 100);
         this.cleanCage = cleanCage;
 
     }

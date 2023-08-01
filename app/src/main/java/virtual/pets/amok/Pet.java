@@ -2,6 +2,7 @@ package virtual.pets.amok;
 
 public class Pet {
     private String name;
+    private String description;
     private String oil;
     private String recharge;
     private String feed;
@@ -9,13 +10,29 @@ public class Pet {
     private String waste;
     private String play;
 
-    public Pet(String name, String oil, String recharge, String feed, String waste, String play) {
+    public Pet(String name, String description, String oil, String recharge, String feed, String waste, String play) {
         this.oil = oil;
         this.recharge = recharge;
         this.feed = feed;
         this.waste = waste;
         this.play = play;
         this.name = name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getThirst() {
+        return thirst;
+    }
+
+    public void setThirst(String thirst) {
+        this.thirst = thirst;
     }
 
     public String getName() {
