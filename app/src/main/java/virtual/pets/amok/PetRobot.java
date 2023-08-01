@@ -1,16 +1,16 @@
 package virtual.pets.amok;
 
-public class Robotic {
+public class PetRobot extends Pet{
     private int oil;
     private int charge;
     private boolean repair;
     private boolean clean;
 
-    public Robotic(int oil, int charge) {
-        // this.name = name;
+    public PetRobot(int oil, int charge) {
+        this.name = name;
         this.oil = oil;
         this.charge = charge;
-        // this.petId = petId;
+        this.petId = petId;
     }
 
     public int getOil() {
