@@ -16,7 +16,7 @@ public class Dog extends PetLive {
     }
 
     public Dog(String name, String description, int feed, int waste, int play, int cleanCage) {
-        super(name, description, 100, 100, 100);
+        super(name, description, 100, 100, 100); //Need to add "description" on pet class
         this.cleanCage = cleanCage;
 
     }
