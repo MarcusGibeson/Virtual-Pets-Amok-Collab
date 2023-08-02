@@ -1,21 +1,31 @@
 package virtual.pets.amok;
 
 public class Pet {
-    private String name;
-    private String oil;
-    private String recharge;
-    private String feed;
-    private String thirst;
-    private String waste;
-    private String play;
+    private static int petCounter = 1;
+    public String name;
+    private int petID;
+    private String petDescription;
 
-    public Pet(String name, String oil, String recharge, String feed, String waste, String play) {
-        this.oil = oil;
-        this.recharge = recharge;
-        this.feed = feed;
-        this.waste = waste;
-        this.play = play;
+    public Pet(String name, String petDescription) {
         this.name = name;
+        this.petDescription = petDescription;
+        this.petID = petCounter++;
+    }
+    
+    public String getPetDescription() {
+        return petDescription;
+    }
+
+    public void setPetDescription(String petDescription) {
+        this.petDescription = petDescription;
+    }
+
+    public int getPetID() {
+        return petID;
+    }
+
+    public void setPetID(int petID) {
+        this.petID = petID;
     }
 
     public String getName() {
@@ -26,44 +36,5 @@ public class Pet {
         this.name = name;
     }
 
-    public String getOil() {
-        return oil;
-    }
-
-    public void setOil(String oil) {
-        this.oil = oil;
-    }
-
-    public String getRecharge() {
-        return recharge;
-    }
-
-    public void setRecharge(String recharge) {
-        this.recharge = recharge;
-    }
-
-    public String getFeed() {
-        return feed;
-    }
-
-    public void setFeed(String feed) {
-        this.feed = feed;
-    }
-
-    public String getWaste() {
-        return waste;
-    }
-
-    public void setWaste(String waste) {
-        this.waste = waste;
-    }
-
-    public String getPlay() {
-        return play;
-    }
-
-    public void setPlay(String play) {
-        this.play = play;
-    }
 
 }
