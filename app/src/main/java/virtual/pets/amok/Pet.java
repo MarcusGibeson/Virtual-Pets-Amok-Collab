@@ -2,7 +2,7 @@ package virtual.pets.amok;
 
 public class Pet {
     private static int petCounter = 1;
-    private String name;
+    public String name;
     private int petID;
     private String petDescription;
 
