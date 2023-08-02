@@ -26,7 +26,7 @@ public class PetDriver {
             PetShelter.addPet(Robodog);
             PetShelter.addPet(Meowotron);
             PetShelter.addPet(Spot);
-            PetShelter.addPet(Tiger);
+            PetShelter.addPet(DonFluffles);
             
             PetShelter.showAllpets();
 
