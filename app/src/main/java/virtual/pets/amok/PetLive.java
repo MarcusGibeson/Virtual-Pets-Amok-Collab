@@ -1,30 +1,19 @@
 package virtual.pets.amok;
 
-public class PetLive { //this should extend Pet
-    private String name;
+public class PetLive extends Pet{ //this should extend Pet
     private int feed;
     private int waste;
     private int play;
-    private int petID; // this should be in Pet with Getters and Setters
 
-    public PetLive(String name, int feed, int waste, int play) {
+    public PetLive(String name, String petDescription, int feed, int waste, int play) {
+        super(name, petDescription);
         this.feed = feed;
         this.waste = waste;
         this.play = play;
-        this.name = name;
-        this.petID = petCounter++; // this should be in Pet constructor
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
 
-    public String getFeed() {
+    public int getFeed() {
         return feed;
     }
 
@@ -32,7 +21,7 @@ public class PetLive { //this should extend Pet
         this.feed = feed;
     }
 
-    public String getWaste() {
+    public int getWaste() {
         return waste;
     }
 
@@ -40,7 +29,7 @@ public class PetLive { //this should extend Pet
         this.waste = waste;
     }
 
-    public String getPlay() {
+    public int getPlay() {
         return play;
     }
 
