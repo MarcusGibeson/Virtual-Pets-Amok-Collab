@@ -1,4 +1,7 @@
 package virtual.pets.amok;
+
+import java.util.Scanner;
+
 //driver class to put all application work inside
 public class PetDriver {
   /*
@@ -28,7 +31,7 @@ public class PetDriver {
             PetShelter.addPet(Spot);
             PetShelter.addPet(DonFluffles);
             
-            PetShelter.showAllpets();
+            PetShelter.showAllPets();
 
     }
 }
