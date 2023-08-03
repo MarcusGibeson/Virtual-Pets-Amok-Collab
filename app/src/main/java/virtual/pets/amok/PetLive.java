@@ -1,24 +1,24 @@
 package virtual.pets.amok;
 
 public class PetLive extends Pet{ 
-    private int feed;
+    private int hunger;
     private int thirst;
-    private int play;
+    private int boredom;
 
-    public PetLive(String name, String petDescription, int feed,  int thirst, int play) {
+    public PetLive(String name, String petDescription, int hunger,  int thirst, int boredom) {
         super(name, petDescription);
-        this.feed = feed;
+        this.hunger = hunger;
         this.thirst = thirst;
-        this.play = play;
+        this.boredom = boredom;
     }
 
 
-    public int getFeed() {
-        return feed;
+    public int getHunger() {
+        return hunger;
     }
 
-    public void setFeed(int feed) {
-        this.feed = feed;
+    public void setHunger(int hunger) {
+        this.hunger = hunger;
     }
 
     public int getThirst() {
@@ -30,16 +30,27 @@ public class PetLive extends Pet{
         this.thirst = thirst;
     }
 
-    public int getPlay() {
-        return play;
+    public int getBoredom() {
+        return boredom;
     }
 
-    public void setPlay(int play) {
-        this.play = play;
+    public void setBoredom(int boredom) {
+        this.boredom = boredom;
+    }
+
+    public void feedPet(){
+        hunger -= 10;
+        thirst+= 5;
+        boredom+=5;
+    }
+    public void waterPet(){
+        hunger +=5;
+        thirst-=10;
+        boredom+=5;
     }
 
     @Override public String toString() {
-        return "Name: " + this.name + "\tHunger: " + this.feed  + " / 100" + "\tThirst: " + this.thirst + " / 100" + "Fun: " + this.play  + " / 100";
+        return "Name: " + this.name + "\tHunger: " + this.hunger  + " / 100" + "\tThirst: " + this.thirst + " / 100" + "Fun: " + this.boredom  + " / 100";
     }
 
 
