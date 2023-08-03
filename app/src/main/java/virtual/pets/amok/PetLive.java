@@ -6,13 +6,13 @@ public class PetLive { //this should extend Pet
     private int thirst;
 
     private int waste;
-    private int play;
+    private int boredom;
 
 
-    public PetLive(String name, int hunger, int waste, int play) {
+    public PetLive(String name, int hunger, int waste, int boredom) {
         this.hunger = hunger;
         this.waste = waste;
-        this.play = play;
+        this.boredom = boredom;
         this.name = name;
          // this should be in Pet constructor
     }
@@ -48,21 +48,23 @@ public class PetLive { //this should extend Pet
         this.waste = waste;
     }
 
-    public int getPlay() {
-        return play;
+    public int getBoredom() {
+        return boredom;
     }
 
-    public void setPlay(int play) {
-        this.play = play;
+    public void setPlay(int boredom) {
+        this.boredom = boredom;
     }
 
     public void feedPet(){
         hunger -=5;
         thirst +=2;
+        boredom +=2;
     }
     public void hydratePet(){
         thirst -=5;
         hunger +=2;
+        boredom +=2;
     }
     
 
