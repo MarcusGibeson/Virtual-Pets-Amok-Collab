@@ -1,38 +1,39 @@
 package virtual.pets.amok;
 
-public class Pet {
-    private String name;
+public class PetRobot extends Pet {
+
     private int oil;
-    private int petID;
+    private int recharge;
+    private int repair;
 
-
-    public Pet(String name, int oil, int recharge) {
+    public PetRobot(String name, String petDescription, int oil, int recharge, int repair) {
+        super(name, petDescription);
         this.oil = oil;
-        this.name = name;
-        this.petID = petCounter++;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getRecharge() {
-        return recharge;
-    }
-
-    public void setRecharge(String recharge) {
         this.recharge = recharge;
+        this.repair = repair;
     }
 
-    public String getOil() {
+    public int getOil() {
         return oil;
     }
 
-    public void setOil(String oil) {
+    public void setOil(int oil) {
         this.oil = oil;
+    }
+
+    public int getRecharge() {
+        return recharge;
+    }
+
+    public void setRecharge(int recharge) {
+        this.recharge = recharge;
+    }
+
+    public int getRepair() {
+        return repair;
+    }
+
+    public void setRepair(int repair) {
+        this.repair = repair;
     }
 }
