@@ -1,5 +1,6 @@
 package virtual.pets.amok;
 
+
 public class Cat extends PetLive {
     /*
      * Adding Liter Box to cat's super constructor.
@@ -22,3 +23,4 @@ public class Cat extends PetLive {
     }
 
 }
+
