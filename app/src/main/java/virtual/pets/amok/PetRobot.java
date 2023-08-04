@@ -5,12 +5,16 @@ public class PetRobot extends Pet {
     private int oil;
     private int recharge;
     private int repair;
+    private int clean;
 
-    public PetRobot(String name, String petDescription, int oil, int recharge, int repair) {
+
+
+    public PetRobot(String name, String petDescription, int oil, int recharge, int repair, int clean) {
         super(name, petDescription);
         this.oil = oil;
         this.recharge = recharge;
         this.repair = repair;
+        this.clean = clean;
     }
 
     public int getOil() {
@@ -35,5 +39,12 @@ public class PetRobot extends Pet {
 
     public void setRepair(int repair) {
         this.repair = repair;
+    }
+        public int getClean() {
+        return clean;
+    }
+
+    public void setClean(int clean) {
+        this.clean = clean;
     }
 }
