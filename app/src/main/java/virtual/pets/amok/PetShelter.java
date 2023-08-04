@@ -38,8 +38,8 @@ public class PetShelter {
      * Returns a collection of pets
      */
     public void showAllPets() {
-        for (Pet pet : shelterAnimals.values()) {
-            System.out.println(pet);
+        for (Integer pet : shelterAnimals.keySet()) {
+            System.out.println(shelterAnimals.get(pet));
             
         }
     }
