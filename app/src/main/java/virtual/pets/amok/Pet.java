@@ -2,7 +2,10 @@ package virtual.pets.amok;
 
 public class Pet {
     private String name;
+<<<<<<< Updated upstream
     private String description;
+=======
+>>>>>>> Stashed changes
     private String oil;
     private String recharge;
     private String feed;
@@ -10,13 +13,18 @@ public class Pet {
     private String waste;
     private String play;
 
+<<<<<<< Updated upstream
     public Pet(String name, String description, String oil, String recharge, String feed, String waste, String play) {
+=======
+    public Pet(String name, String oil, String recharge, String feed, String waste, String play) {
+>>>>>>> Stashed changes
         this.oil = oil;
         this.recharge = recharge;
         this.feed = feed;
         this.waste = waste;
         this.play = play;
         this.name = name;
+<<<<<<< Updated upstream
     }
 
     public String getDescription() {
@@ -33,6 +41,8 @@ public class Pet {
 
     public void setThirst(String thirst) {
         this.thirst = thirst;
+=======
+>>>>>>> Stashed changes
     }
 
     public String getName() {
