@@ -1,5 +1,5 @@
 package virtual.pets.amok;
- 
+
 public class Cat extends PetLive {
     /*
      * Adding Liter Box to cat's super constructor.
@@ -15,8 +15,8 @@ public class Cat extends PetLive {
         this.literBox = literBox;
     }
 
-    public Cat(String name,String description, int feed, int waste, int play, int literBox) {
-        super(name, description, feed, waste, play); //Need to add "description" on pet class  
+    public Cat(String name, String description, int feed, int waste, int play, int literBox) {
+        super(name, description, feed, waste, play);
         this.literBox = literBox;
 
     }
