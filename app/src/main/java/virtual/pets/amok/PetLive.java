@@ -146,8 +146,5 @@ public class PetLive { //this should extend Pet
     }
     
 
-<<<<<<< HEAD
->>>>>>> Stashed changes
-=======
->>>>>>> f2020ed1e438aa7dc1be9052129d89cd8dab2aee
-}
+
+    }

@@ -16,7 +16,7 @@ public class Cat extends PetLive {
     }
 
     public Cat(String name, int feed, int waste, int play, int literBox) {
-        super(name, 50, 50, 50);
+        super(name, feed, waste, play);
         this.literBox = literBox;
 
     }
