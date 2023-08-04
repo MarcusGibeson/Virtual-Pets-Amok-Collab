@@ -53,11 +53,50 @@ public class PetDriver {
                                                 //play
                                                 break;
                                         }
+                                        case "5" : {
+                                                //adopt pet
+                                                break;
+                                        }
+                                        case "6" : {
+                                                //previous menu
+                                                break;
+                                        }
+                                        case "0" : {
+                                                //exit 
+                                                break;
+                                        }
                                 }
                                 break;
                         }
                         case "2" : {
                                 String robotValue = menu.robotPetMenu();
+                                switch (robotValue) {
+                                        case "1" : {
+                                                //create pet
+                                                break;
+                                        }
+                                        case "2" : {
+                                                //recharge battery
+                                                break;
+                                        }
+                                        case "3" : {
+                                                //oil pets
+                                                break;
+                                        }
+                                        case "4" : {
+                                                //destroy robot
+                                                break;
+                                        }
+                                        case "5" : {
+                                                //previous menu
+                                                break;
+                                        }
+                                        case "0" : {
+                                                //exit
+                                                break;
+                                        }
+
+                                }
                                 break;
                         }
                         case "0" : {
