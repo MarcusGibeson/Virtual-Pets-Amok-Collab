@@ -29,7 +29,45 @@ public class PetDriver {
                 PetShelter.addPet(Spot);
                 PetShelter.addPet(Tiger);
 
+                while (!exitGameLoop) {
                 PetShelter.showAllpets();
                 
+                String option = menu.mainMenu();
+                switch (option) {
+                        case "1" : {
+                                String liveValue = menu.livePetMenu();
+                                Switch (liveValue) {
+                                        case "1" : {
+                                                //add pet
+                                                break;
+                                        }
+                                        case "2" : {
+                                                //feed
+                                                break;
+                                        }
+                                        case "3" : {
+                                                //water
+                                                break;
+                                        }                                        
+                                        case "4" : {
+                                                //play
+                                                break;
+                                        }
+                                }
+                                break;
+                        }
+                        case "2" : {
+                                String robotValue = menu.robotPetMenu();
+                                break;
+                        }
+                        case "0" : {
+                                System.out.println("Now exiting game.");
+                                System.exit(0);
+                                exitGameLoop = true;
+                                break;
+
+                        }
+                }
+                }
         }
 }

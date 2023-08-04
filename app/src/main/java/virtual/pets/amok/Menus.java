@@ -21,8 +21,8 @@ public class Menus {
         
         
         System.out.println("1. Admit Pet");
-        System.out.println("2. Feed Pet");
-        System.out.println("3. Give Pet Water");
+        System.out.println("2. Feed Pets");
+        System.out.println("3. Give Pets Water");
         System.out.println("4. Play With Pet");
         System.out.println("5. Adopt out Pet");
         System.out.println("6. Return to Main Menu");
