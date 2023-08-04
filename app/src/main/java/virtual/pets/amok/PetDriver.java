@@ -84,10 +84,18 @@ public class PetDriver {
                                                 break;
                                         }
                                         case "4" : {
-                                                //destroy robot
+                                                //robot dance
                                                 break;
                                         }
                                         case "5" : {
+                                                //robot laser
+                                                break;
+                                        }
+                                        case "6" : {
+                                                //recycle robot
+                                                break;
+                                        }
+                                        case "7" : {
                                                 //previous menu
                                                 break;
                                         }
