@@ -36,7 +36,7 @@ public class PetDriver {
                 switch (option) {
                         case "1" : {
                                 String liveValue = menu.livePetMenu();
-                                Switch (liveValue) {
+                                switch (liveValue) {
                                         case "1" : {
                                                 //add pet
                                                 break;
