@@ -3,17 +3,19 @@ package virtual.pets.amok;
 <<<<<<< Updated upstream
 public class PetLive extends pet { //this should extend Pet
     private String name;
-    private int feed;
-    private int waste;
-    private int play;
-    private int petID; // this should be in Pet with Getters and Setters
+    private int hunger;
+    private int thirst;
 
-    public PetLive(String name, int feed, int waste, int play) {
-        this.feed = feed;
+    private int waste;
+    private int boredom;
+
+
+    public PetLive(String name, int hunger, int waste, int boredom) {
+        this.hunger = hunger;
         this.waste = waste;
-        this.play = play;
+        this.boredom = boredom;
         this.name = name;
-        this.petID = petCounter++; // this should be in Pet constructor
+         // this should be in Pet constructor
     }
 
     public String getName() {
@@ -23,6 +25,7 @@ public class PetLive extends pet { //this should extend Pet
     public void setName(String name) {
         this.name = name;
     }
+<<<<<<< HEAD
 
 
     public String getFeed() {
@@ -56,6 +59,25 @@ public class PetLive { //this should extend Pet
 <<<<<<< Updated upstream
 
     public String getWaste() {
+=======
+    public int getThirst() {
+        return thirst;
+    }
+
+    public void setThirst(int thirst) {
+        this.thirst = thirst;
+    }
+
+    public int getHunger() {
+        return hunger;
+    }
+
+    public void setHunger(int hunger) {
+        this.hunger = hunger;
+    }
+
+    public int getWaste() {
+>>>>>>> f2020ed1e438aa7dc1be9052129d89cd8dab2aee
         return waste;
     }
 
@@ -63,6 +85,7 @@ public class PetLive { //this should extend Pet
         this.waste = waste;
     }
 
+<<<<<<< HEAD
     public String getPlay() {
         return play;
 =======
@@ -101,6 +124,16 @@ public class PetLive { //this should extend Pet
         this.boredom = boredom;
     }
 
+=======
+    public int getBoredom() {
+        return boredom;
+    }
+
+    public void setPlay(int boredom) {
+        this.boredom = boredom;
+    }
+
+>>>>>>> f2020ed1e438aa7dc1be9052129d89cd8dab2aee
     public void feedPet(){
         hunger -=5;
         thirst +=2;
@@ -113,5 +146,8 @@ public class PetLive { //this should extend Pet
     }
     
 
+<<<<<<< HEAD
 >>>>>>> Stashed changes
+=======
+>>>>>>> f2020ed1e438aa7dc1be9052129d89cd8dab2aee
 }

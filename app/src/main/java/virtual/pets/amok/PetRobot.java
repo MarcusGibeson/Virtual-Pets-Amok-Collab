@@ -7,6 +7,7 @@ public class Pet {
 
 
     public Pet(String name, int oil, int recharge) {
+<<<<<<< HEAD
 <<<<<<< Updated upstream
         this.feed = feed;
         this.waste = waste;
@@ -14,6 +15,9 @@ public class Pet {
 =======
         this.oil = oil;
 >>>>>>> Stashed changes
+=======
+        this.oil = oil;
+>>>>>>> f2020ed1e438aa7dc1be9052129d89cd8dab2aee
         this.name = name;
         this.petID = petCounter++;
     }
