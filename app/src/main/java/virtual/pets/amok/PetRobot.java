@@ -1,6 +1,6 @@
 package virtual.pets.amok;
 
-public class Pet {
+public class PetRobot {
     private String name;
     private int oil;
     private int petID;

@@ -1,71 +1,47 @@
 package virtual.pets.amok;
 
-public class PetLive { //this should extend Pet
-    private String name;
-    private int hunger;
+public class PetLive extends Pet{ 
+    private int feed;
     private int thirst;
+    private int play;
 
-    private int waste;
-    private int boredom;
-
-
-    public PetLive(String name, int hunger, int waste, int boredom) {
-        this.hunger = hunger;
-        this.waste = waste;
-        this.boredom = boredom;
-        this.name = name;
-         // this should be in Pet constructor
+    public PetLive(String name, String petDescription, int feed,  int thirst, int play) {
+        super(name, petDescription);
+        this.feed = feed;
+        this.thirst = thirst;
+        this.play = play;
     }
 
-    public String getName() {
-        return name;
+
+    public int getFeed() {
+        return feed;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFeed(int feed) {
+        this.feed = feed;
     }
+
     public int getThirst() {
         return thirst;
     }
+
 
     public void setThirst(int thirst) {
         this.thirst = thirst;
     }
 
-    public int getHunger() {
-        return hunger;
+    public int getPlay() {
+        return play;
     }
 
-    public void setHunger(int hunger) {
-        this.hunger = hunger;
+    public void setPlay(int play) {
+        this.play = play;
     }
 
-    public int getWaste() {
-        return waste;
+    @Override public String toString() {
+        return "Name: " + this.name + "\tHunger: " + this.feed  + " / 100" + "\tThirst: " + this.thirst + " / 100" + "Fun: " + this.play  + " / 100";
     }
 
-    public void setWaste(int waste) {
-        this.waste = waste;
-    }
 
-    public int getBoredom() {
-        return boredom;
-    }
-
-    public void setPlay(int boredom) {
-        this.boredom = boredom;
-    }
-
-    public void feedPet(){
-        hunger -=5;
-        thirst +=2;
-        boredom +=2;
-    }
-    public void hydratePet(){
-        thirst -=5;
-        hunger +=2;
-        boredom +=2;
-    }
-    
 
 }
