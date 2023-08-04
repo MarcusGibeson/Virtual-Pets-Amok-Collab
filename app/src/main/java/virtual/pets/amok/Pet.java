@@ -2,7 +2,6 @@ package virtual.pets.amok;
 
 public class Pet {
     private String name;
-<<<<<<< Updated upstream
     private String description;
 =======
 >>>>>>> Stashed changes
