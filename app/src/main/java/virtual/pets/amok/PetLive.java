@@ -15,32 +15,6 @@ public class PetLive extends Pet { // this should extend Pet
         this.thirst = thirst;
     }
 
-    
-    public int getThirst() {
-        return thirst;
-    }
-
-    public void setThirst(int thirst) {
-        this.thirst = thirst;
-    }
-
-    public int getHunger() {
-        return hunger;
-    }
-
-    public void setHunger(int hunger) {
-        this.hunger = hunger;
-    }
-
-    public int getWaste() {
-
-        return waste;
-    }
-
-    public void setWaste(int waste) {
-        this.waste = waste;
-    }
-
     public int getThirst() {
         return thirst;
     }
@@ -73,10 +47,10 @@ public class PetLive extends Pet { // this should extend Pet
         this.boredom = boredom;
     }
 
-    public void feedPet(){
-        hunger -=5;
-        thirst +=2;
-        boredom +=2;
+    public void feedPet() {
+        hunger -= 5;
+        thirst += 2;
+        boredom += 2;
     }
 
     public void hydratePet() {
@@ -84,7 +58,5 @@ public class PetLive extends Pet { // this should extend Pet
         hunger += 2;
         boredom += 2;
     }
-    
-    
 
 }
