@@ -29,7 +29,92 @@ public class PetDriver {
                 PetShelter.addPet(Spot);
                 PetShelter.addPet(Tiger);
 
+                while (!exitGameLoop) {
                 PetShelter.showAllpets();
                 
+                String option = menu.mainMenu();
+                switch (option) {
+                        case "1" : {
+                                String liveValue = menu.livePetMenu();
+                                switch (liveValue) {
+                                        case "1" : {
+                                                //add pet
+                                                break;
+                                        }
+                                        case "2" : {
+                                                //feed
+                                                break;
+                                        }
+                                        case "3" : {
+                                                //water
+                                                break;
+                                        }                                        
+                                        case "4" : {
+                                                //play
+                                                break;
+                                        }
+                                        case "5" : {
+                                                //adopt pet
+                                                break;
+                                        }
+                                        case "6" : {
+                                                //previous menu
+                                                break;
+                                        }
+                                        case "0" : {
+                                                //exit 
+                                                break;
+                                        }
+                                }
+                                break;
+                        }
+                        case "2" : {
+                                String robotValue = menu.robotPetMenu();
+                                switch (robotValue) {
+                                        case "1" : {
+                                                //create pet
+                                                break;
+                                        }
+                                        case "2" : {
+                                                //recharge battery
+                                                break;
+                                        }
+                                        case "3" : {
+                                                //oil pets
+                                                break;
+                                        }
+                                        case "4" : {
+                                                //robot dance
+                                                break;
+                                        }
+                                        case "5" : {
+                                                //robot laser
+                                                break;
+                                        }
+                                        case "6" : {
+                                                //recycle robot
+                                                break;
+                                        }
+                                        case "7" : {
+                                                //previous menu
+                                                break;
+                                        }
+                                        case "0" : {
+                                                //exit
+                                                break;
+                                        }
+
+                                }
+                                break;
+                        }
+                        case "0" : {
+                                System.out.println("Now exiting game.");
+                                System.exit(0);
+                                exitGameLoop = true;
+                                break;
+
+                        }
+                }
+                }
         }
 }

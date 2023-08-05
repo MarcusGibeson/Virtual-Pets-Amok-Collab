@@ -1,38 +1,89 @@
 package virtual.pets.amok;
 
+<<<<<<< HEAD
 public class PetRobot {
     private String name;
+=======
+public class PetRobot extends Pet {
+    // variables init.
+>>>>>>> ad8f35fe053c9c3962e767d59c0b94c79586bc94
     private int oil;
-    private int petID;
+    private int power;
+    // private boolean repair;
+    // private boolean recharge;
 
-
-    public Pet(String name, int oil, int recharge) {
+    // super constructor
+    public PetRobot(String name, String petDescription, int oil, int power) {
+        super(name, petDescription);
         this.oil = oil;
-        this.name = name;
-        this.petID = petCounter++;
+        this.power = power;
+        // this.repair = repair;
+        // this.recharge = recharge;
+
+        oil = 60;
+        power = 60;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getRecharge() {
-        return recharge;
-    }
-
-    public void setRecharge(String recharge) {
-        this.recharge = recharge;
-    }
-
-    public String getOil() {
+    // setters and getters
+    public int getOil() {
         return oil;
     }
 
-    public void setOil(String oil) {
+    public void setOil(int oil) {
         this.oil = oil;
     }
-}
+
+    public int getPower() {
+        return power;
+    }
+
+    public void setPower(int power) {
+        this.power = power;
+    }
+
+    // public boolean isRepair() {
+    //     return repair;
+    // }
+
+    // public void setRepair(boolean repair) {
+    //     this.repair = repair;
+    // }
+
+    // public boolean isRecharge() {
+    //     return recharge;
+    // }
+
+    // public void setRecharge(boolean recharge) {
+    //     this.recharge = recharge;
+    // }
+
+    // menu actions
+    public void oilRobo() {
+        oil += 10;
+    }
+
+    public void chargeRobo() {
+        power = 100;
+    }
+
+    public void roboDance() {
+        power -= 20;
+        oil -= 25;
+    }
+
+    public void roboLaser() {
+        power -= 35;
+        oil -= 15;
+    }
+
+    public void needsRepair(){
+        if(getOil()<10){
+            System.out.println("Robopet needs repair");
+        }}
+
+    public void needsCharge(){
+            if(getPower()<15)
+            System.out.println("Robopet needs to charge");
+        }
+
+    }
