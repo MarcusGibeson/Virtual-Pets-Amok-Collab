@@ -1,29 +1,6 @@
 package virtual.pets.amok;
-<<<<<<< HEAD
 
-public class Dog extends PetLive {
-    /*
-     * Adding Clean cage to the dog's super constructor.
-     */
 
-    private int cleanCage;
-
-    public int getCleanCage() {
-        return cleanCage;
-    }
-
-    public void setCleanCage(int cleanCage) {
-        this.cleanCage = cleanCage;
-    }
-
-    public Dog(String name, String description, int feed, int waste, int play, int cleanCage) {
-        super(name, description, feed, waste, play);
-        this.cleanCage = cleanCage;
-
-    }
-
-}
-=======
     //dog class extending live pet for cage cleaning
 public class Dog extends PetLive {
 
@@ -45,4 +22,4 @@ public class Dog extends PetLive {
         this.dirtyCage = dirtyCage;
     }
 }
->>>>>>> ad8f35fe053c9c3962e767d59c0b94c79586bc94
+
