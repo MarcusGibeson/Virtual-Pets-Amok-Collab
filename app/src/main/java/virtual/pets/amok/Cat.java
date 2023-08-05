@@ -1,24 +1,20 @@
 package virtual.pets.amok;
 
+//cat class extending live pet for liter box
 public class Cat extends PetLive {
-    /*
-     * Adding Liter Box to cat's super constructor.
-     */
 
-    private int literBox;
+    private Boolean litterBox;
 
-    public int getLiterBox() {
-        return literBox;
+    public Cat(String name, String petDescription, int hunger, int thirst, int waste, int boredom, boolean litterBox) {
+        super(name, petDescription, hunger, thirst, waste, boredom);
+        this.litterBox = litterBox;
     }
 
-    public void setLiterBox(int literBox) {
-        this.literBox = literBox;
+    public Boolean getLitterBox() {
+        return litterBox;
     }
 
-    public Cat(String name, int feed, int waste, int play, int literBox) {
-        super(name, feed, waste, play);
-        this.literBox = literBox;
-
+    public void setLitterBox(Boolean litterBox) {
+        this.litterBox = litterBox;
     }
-
 }

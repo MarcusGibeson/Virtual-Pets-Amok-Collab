@@ -40,6 +40,7 @@ public class PetShelter {
     public void showAllPets() {
         for (Integer pet : shelterAnimals.keySet()) {
             System.out.println(shelterAnimals.get(pet));
+            
         }
     }
     
