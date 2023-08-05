@@ -1,28 +1,5 @@
 package virtual.pets.amok;
 
-<<<<<<< HEAD
-public class PetLive extends Pet{ 
-    private int feed;
-    private int thirst;
-    private int play;
-
-    public PetLive(String name, String petDescription, int feed,  int thirst, int play) {
-        super(name, petDescription);
-        this.feed = feed;
-        this.thirst = thirst;
-        this.play = play;
-    }
-
-
-    public int getFeed() {
-        return feed;
-    }
-
-    public void setFeed(int feed) {
-        this.feed = feed;
-    }
-
-=======
 public class PetLive extends Pet { // this should extend Pet
 
     private int hunger;
@@ -38,7 +15,6 @@ public class PetLive extends Pet { // this should extend Pet
         this.thirst = thirst;
     }
 
->>>>>>> ad8f35fe053c9c3962e767d59c0b94c79586bc94
     public int getThirst() {
         return thirst;
     }
@@ -61,8 +37,6 @@ public class PetLive extends Pet { // this should extend Pet
     }
 
 
-<<<<<<< HEAD
-=======
     public int getBoredom() {
         return boredom;
     }
@@ -82,6 +56,5 @@ public class PetLive extends Pet { // this should extend Pet
         hunger += 2;
         boredom += 2;
     }
->>>>>>> ad8f35fe053c9c3962e767d59c0b94c79586bc94
 
 }

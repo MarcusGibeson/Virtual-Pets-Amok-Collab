@@ -1,12 +1,7 @@
 package virtual.pets.amok;
 
-<<<<<<< HEAD
-public class PetRobot {
-    private String name;
-=======
 public class PetRobot extends Pet {
     // variables init.
->>>>>>> ad8f35fe053c9c3962e767d59c0b94c79586bc94
     private int oil;
     private int power;
     // private boolean repair;
