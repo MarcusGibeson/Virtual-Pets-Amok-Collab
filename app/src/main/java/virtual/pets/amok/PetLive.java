@@ -15,9 +15,7 @@ public class PetLive extends Pet { // this should extend Pet
         this.thirst = thirst;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+    
     public int getThirst() {
         return thirst;
     }
@@ -35,7 +33,7 @@ public class PetLive extends Pet { // this should extend Pet
     }
 
     public int getWaste() {
->>>>>>> f2020ed1e438aa7dc1be9052129d89cd8dab2aee
+
         return waste;
     }
 
@@ -43,10 +41,6 @@ public class PetLive extends Pet { // this should extend Pet
         this.waste = waste;
     }
 
-<<<<<<< HEAD
-    public String getPlay() {
-        return play;
-=======
     public int getThirst() {
         return thirst;
     }
@@ -57,15 +51,12 @@ public class PetLive extends Pet { // this should extend Pet
 
     public int getHunger() {
         return hunger;
->>>>>>> Stashed changes
     }
 
     public void setHunger(int hunger) {
         this.hunger = hunger;
     }
 
-<<<<<<< Updated upstream
-=======
     public int getWaste() {
         return waste;
     }
@@ -93,6 +84,7 @@ public class PetLive extends Pet { // this should extend Pet
         hunger += 2;
         boredom += 2;
     }
+    
     
 
 }
