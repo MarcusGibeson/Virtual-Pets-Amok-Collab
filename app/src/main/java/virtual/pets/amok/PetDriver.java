@@ -1,5 +1,7 @@
 package virtual.pets.amok;
 
+import java.util.Scanner;
+
 //driver class to put all application work inside
 public class PetDriver {
         /*
@@ -11,7 +13,7 @@ public class PetDriver {
         /*
          * Starts the game loop
          */
-        public void driver() {
+        public void driver() throws Exception  {
 
                 boolean exitGameLoop = false;
                 Menus menu = new Menus();
@@ -19,18 +21,18 @@ public class PetDriver {
                 /*
                  * Creates starting pets in shelter (1 of each)
                  */
-                PetRobot Robodog = new PetRobot(robotDog);
-                PetRobot Meowotron = new PetRobot(robotCat);
-                Dog Spot = new Dog(dog);
-                Cat DonFluffles = new Cat(cat);
+                PetRobot Robodog = new PetRobot("Robodog", "A robot dog", 75, 75, 75, 75);
+                PetRobot Meowotron = new PetRobot("Meowotron", "A robot cat", 75, 75, 75, 75);
+                Dog Spot = new Dog("Spot", "A white dog with a brown spot", 75, 75, 75, 75, false);
+                Cat DonFluffles = new Cat("Don Fluffles", "Fluffiest cat ever", 75, 75, 75, 75, false);
 
                 PetShelter.addPet(Robodog);
                 PetShelter.addPet(Meowotron);
                 PetShelter.addPet(Spot);
-                PetShelter.addPet(Tiger);
+                PetShelter.addPet(DonFluffles);
 
                 while (!exitGameLoop) {
-                PetShelter.showAllpets();
+                PetShelter.showAllPets();
                 
                 String option = menu.mainMenu();
                 switch (option) {
@@ -38,26 +40,46 @@ public class PetDriver {
                                 String liveValue = menu.livePetMenu();
                                 switch (liveValue) {
                                         case "1" : {
-                                                //add pet
+                                                //add cat
+                                                System.out.println("What is the name of the new pet?");
+                                                String nameInput = input.nextLine();
+                                                System.out.println("Descripe the new pet: ");
+                                                String descriptionInput = input.nextLine();
+                                                Cat newCat = new Cat(nameInput, descriptionInput, 75, 75, 75, 75, false);
+                                                PetShelter.addPet(newCat);
+                                                System.out.println(nameInput + " was added to the shelter! Press enter to continue...");
+                                                input.nextLine();
                                                 break;
                                         }
                                         case "2" : {
-                                                //feed
+                                                //add dog
+                                                System.out.println("What is the name of the new pet?");
+                                                String nameInput = input.nextLine();
+                                                System.out.println("Descripe the new pet: ");
+                                                String descriptionInput = input.nextLine();
+                                                Dog newDog = new Dog(nameInput, descriptionInput, 75, 75, 75, 75, false);
+                                                PetShelter.addPet(newDog);
+                                                System.out.println(nameInput + " was added to the shelter! Press enter to continue...");
+                                                input.nextLine();
                                                 break;
                                         }
                                         case "3" : {
+                                                //feed
+                                                break;
+                                        }
+                                        case "4" : {
                                                 //water
                                                 break;
                                         }                                        
-                                        case "4" : {
+                                        case "5" : {
                                                 //play
                                                 break;
                                         }
-                                        case "5" : {
+                                        case "6" : {
                                                 //adopt pet
                                                 break;
                                         }
-                                        case "6" : {
+                                        case "7" : {
                                                 //previous menu
                                                 break;
                                         }
