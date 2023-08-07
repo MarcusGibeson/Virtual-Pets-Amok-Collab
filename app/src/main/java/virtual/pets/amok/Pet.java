@@ -3,8 +3,8 @@ package virtual.pets.amok;
 public abstract class Pet {
     private static int petCounter = 1;
     private int petID;
-    private String name;
-    private String petDescription;
+    public String name;
+    public String petDescription;
 
     public Pet(String name, String petDescription) {
         this.name = name;

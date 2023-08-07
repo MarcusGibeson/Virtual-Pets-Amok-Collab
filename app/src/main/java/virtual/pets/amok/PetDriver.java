@@ -80,7 +80,22 @@ public class PetDriver {
                                                 break;
                                         }
                                         case "7" : {
-                                                //previous menu
+                                                //clean litter or cage
+                                                String catOrDog = menu.dogOrCatMenu();
+                                                switch (catOrDog) {
+                                                        case "1" : {
+                                                                //litter box
+                                                                break;
+                                                        }
+                                                        case "2" : {
+                                                                //dog cages
+                                                                break;
+                                                        }
+                                                        case "0" : {
+                                                                //exit
+                                                                break;
+                                                        }
+                                                }
                                                 break;
                                         }
                                         case "0" : {
