@@ -21,7 +21,7 @@ public class Menus {
         
         
         System.out.println("1. Admit New Cat");
-        System.out.println("2. Admint New Dog");
+        System.out.println("2. Admit New Dog");
         System.out.println("3. Feed Pets");
         System.out.println("4. Give Pets Water");
         System.out.println("5. Play With Pet");
