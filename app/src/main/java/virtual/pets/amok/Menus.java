@@ -20,12 +20,13 @@ public class Menus {
     public String livePetMenu(){
         
         
-        System.out.println("1. Admit Pet");
-        System.out.println("2. Feed Pets");
-        System.out.println("3. Give Pets Water");
-        System.out.println("4. Play With Pet");
-        System.out.println("5. Adopt out Pet");
-        System.out.println("6. Return to Main Menu");
+        System.out.println("1. Admit New Cat");
+        System.out.println("2. Admint New Dog");
+        System.out.println("3. Feed Pets");
+        System.out.println("4. Give Pets Water");
+        System.out.println("5. Play With Pet");
+        System.out.println("6. Adopt out Pet");
+        System.out.println("7. Clean litter box or cage");
         System.out.println("0. Exit");
         System.out.print("\nSelect an Option? ");
         
@@ -34,6 +35,15 @@ public class Menus {
         return value;
     }
 
+    public String dogOrCatMenu() {
+        System.out.println("1. Clean Cat Litter Boxes");
+        System.out.println("2. Clean Dog cages");
+        System.out.println("0. Exit");
+
+        String value = input.nextLine();
+        return value;
+    }
+    
     public String robotPetMenu(){
         
         

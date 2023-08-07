@@ -2,10 +2,10 @@ package virtual.pets.amok;
 
 public class PetLive extends Pet { // this should extend Pet
 
-    private int hunger;
-    private int thirst;
-    private int waste;
-    private int boredom;
+    public int hunger;
+    public int thirst;
+    public int waste;
+    public int boredom;
 
     public PetLive(String name, String petDescription, int hunger, int thirst, int waste, int boredom) {
         super(name, petDescription);
