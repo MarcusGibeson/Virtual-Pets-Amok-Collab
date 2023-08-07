@@ -19,4 +19,21 @@ public class Dog extends PetLive {
     public void setDirtyCage(boolean dirtyCage) {
         this.dirtyCage = dirtyCage;
     }
+
+    public void useCage() {
+        if (this.waste == 100) {
+            this.dirtyCage = true;
+            this.waste = 0;
+            System.out.println(this.name + " just pooped in their cage.");
+        }
+    }
+
+    public void cleanCage() {
+        this.dirtyCage = false;
+        System.out.println(this.name + "'s cage is now clean!");
+    }
+
+    @Override public String toString() {
+        return "Name: " + this.name + "\tHunger: " + this.hunger + " / 100 " + "\tThirst: " + this.thirst + " / 100 " + "\tBoredom: " + this.boredom + " / 100 " + "\n\t\tCage dirty? " + this.dirtyCage;
+        }
 }
