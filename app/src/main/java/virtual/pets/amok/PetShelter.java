@@ -40,10 +40,10 @@ public class PetShelter {
     public void showAllPets() {
         for (Integer pet : shelterAnimals.keySet()) {
             System.out.println(shelterAnimals.get(pet));
-            
+
         }
     }
-    
+
     /*
      * Removes a specific pet
      */
@@ -55,4 +55,12 @@ public class PetShelter {
         }
     }
 
+    public void feedAllPets() {
+        for (Pet pet : shelterAnimals.values()) {
+            if (pet instanceof PetLive) {
+                ((PetLive) pet).feedPet();
+                System.out.println(pet.getName() + " has been fed.");
+            }
+        }
+    }
 }

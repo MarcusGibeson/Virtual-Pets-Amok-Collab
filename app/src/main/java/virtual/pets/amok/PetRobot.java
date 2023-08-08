@@ -4,19 +4,16 @@ public class PetRobot extends Pet {
     // variables init.
     private int oil;
     private int power;
-    // private boolean repair;
-    // private boolean recharge;
+    // int boolean repair;
+    // int boolean recharge;
 
     // super constructor
-    public PetRobot(String name, String petDescription, int oil, int power) {
+    public PetRobot(String name, String petDescription, int oil, int power, int repair, int recharge) {
         super(name, petDescription);
         this.oil = oil;
         this.power = power;
         // this.repair = repair;
         // this.recharge = recharge;
-
-        oil = 60;
-        power = 60;
     }
 
     // setters and getters
