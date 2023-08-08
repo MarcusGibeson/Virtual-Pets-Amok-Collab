@@ -21,13 +21,13 @@ public class PetDriver {
                 /*
                  * Creates starting pets in shelter (1 of each)
                  */
-                // PetRobot Robodog = new PetRobot("Robodog", "A robot dog", 75, 75, 75, 75);
-                // PetRobot Meowotron = new PetRobot("Meowotron", "A robot cat", 75, 75, 75, 75);
+                PetRobot Robodog = new PetRobot("Robodog", "A robot dog", 75, 75, 75, 75);
+                PetRobot Meowotron = new PetRobot("Meowotron", "A robot cat", 75, 75, 75, 75);
                 Dog Spot = new Dog("Spot", "A white dog with a brown spot", 75, 75, 75, 75, false);
                 Cat DonFluffles = new Cat("Don Fluffles", "Fluffiest cat ever", 75, 75, 75, 75, false);
 
-                // PetShelter.addPet(Robodog);
-                // PetShelter.addPet(Meowotron);
+                PetShelter.addPet(Robodog);
+                PetShelter.addPet(Meowotron);
                 PetShelter.addPet(Spot);
                 PetShelter.addPet(DonFluffles);
 
@@ -45,7 +45,7 @@ public class PetDriver {
                                                 String nameInput = input.nextLine();
                                                 System.out.println("Descripe the new pet: ");
                                                 String descriptionInput = input.nextLine();
-                                                Pet newCat = new Pet(nameInput, descriptionInput, 75, 75, 75, 75, 0);
+                                                Cat newCat = new Cat(nameInput, descriptionInput, 75, 75, 75, 75, false);
                                                 PetShelter.addPet(newCat);
                                                 System.out.println(nameInput + " was added to the shelter! Press enter to continue...");
                                                 input.nextLine();
@@ -57,7 +57,7 @@ public class PetDriver {
                                                 String nameInput = input.nextLine();
                                                 System.out.println("Descripe the new pet: ");
                                                 String descriptionInput = input.nextLine();
-                                                Pet newDog = new Pet(nameInput, descriptionInput, 75, 75, 75, 75, false);
+                                                Dog newDog = new Dog(nameInput, descriptionInput, 75, 75, 75, 75, false);
                                                 PetShelter.addPet(newDog);
                                                 System.out.println(nameInput + " was added to the shelter! Press enter to continue...");
                                                 input.nextLine();
@@ -65,7 +65,6 @@ public class PetDriver {
                                         }
                                         case "3" : {
                                                 //feed
-                                                PetShelter.feedAllPets();
                                                 break;
                                         }
                                         case "4" : {
@@ -122,18 +121,10 @@ public class PetDriver {
                                                 break;
                                         }
                                         case "4" : {
-                                                //robot dance
+                                                //destroy robot
                                                 break;
                                         }
                                         case "5" : {
-                                                //robot laser
-                                                break;
-                                        }
-                                        case "6" : {
-                                                //recycle robot
-                                                break;
-                                        }
-                                        case "7" : {
                                                 //previous menu
                                                 break;
                                         }
