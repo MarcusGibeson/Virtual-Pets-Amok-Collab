@@ -1,22 +1,22 @@
 package virtual.pets.amok;
 
 public class PetRobot extends Pet {
-
+    // variables init.
     private int oil;
-    private int recharge;
-    private int repair;
-    private int clean;
+    private int power;
+    // int boolean repair;
+    // int boolean recharge;
 
-
-
-    public PetRobot(String name, String petDescription, int oil, int recharge, int repair, int clean) {
+    // super constructor
+    public PetRobot(String name, String petDescription, int oil, int power, int repair, int recharge) {
         super(name, petDescription);
         this.oil = oil;
-        this.recharge = recharge;
-        this.repair = repair;
-        this.clean = clean;
+        this.power = power;
+        // this.repair = repair;
+        // this.recharge = recharge;
     }
 
+    // setters and getters
     public int getOil() {
         return oil;
     }
@@ -25,27 +25,47 @@ public class PetRobot extends Pet {
         this.oil = oil;
     }
 
-    public int getRecharge() {
-        return recharge;
+    public int getPower() {
+        return power;
     }
 
-    public void setRecharge(int recharge) {
-        this.recharge = recharge;
+    public void setPower(int power) {
+        this.power = power;
     }
 
-    public int getRepair() {
-        return repair;
+    // public boolean isRepair() {
+    //     return repair;
+    // }
+
+    // public void setRepair(boolean repair) {
+    //     this.repair = repair;
+    // }
+
+    // public boolean isRecharge() {
+    //     return recharge;
+    // }
+
+    // public void setRecharge(boolean recharge) {
+    //     this.recharge = recharge;
+    // }
+
+    // menu actions
+    public void oilRobo() {
+        oil += 10;
     }
 
-    public void setRepair(int repair) {
-        this.repair = repair;
-    }
-        public int getClean() {
-        return clean;
+    public void chargeRobo() {
+        power = 100;
     }
 
-    public void setClean(int clean) {
-        this.clean = clean;
+    public void roboDance() {
+        power -= 20;
+        oil -= 25;
+    }
+
+    public void roboLaser() {
+        power -= 35;
+        oil -= 15;
     }
 
         public void oilRobot() {
