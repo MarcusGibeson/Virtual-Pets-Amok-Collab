@@ -18,6 +18,7 @@ public class PetDriver {
                 boolean exitGameLoop = false;
                 Menus menu = new Menus();
 
+
                 /*
                  * Creates starting pets in shelter (1 of each)
                  */
@@ -43,7 +44,7 @@ public class PetDriver {
                                                 //add cat
                                                 System.out.println("What is the name of the new pet?");
                                                 String nameInput = input.nextLine();
-                                                System.out.println("Descripe the new pet: ");
+                                                System.out.println("Describe the new pet: ");
                                                 String descriptionInput = input.nextLine();
                                                 Cat newCat = new Cat(nameInput, descriptionInput, 75, 75, 75, 75, false);
                                                 PetShelter.addPet(newCat);
@@ -55,7 +56,7 @@ public class PetDriver {
                                                 //add dog
                                                 System.out.println("What is the name of the new pet?");
                                                 String nameInput = input.nextLine();
-                                                System.out.println("Descripe the new pet: ");
+                                                System.out.println("Describe the new pet: ");
                                                 String descriptionInput = input.nextLine();
                                                 Dog newDog = new Dog(nameInput, descriptionInput, 75, 75, 75, 75, false);
                                                 PetShelter.addPet(newDog);
@@ -145,5 +146,10 @@ public class PetDriver {
                         }
                 }
                 }
-        }
+
+
+
+                
+        }            
+
 }
