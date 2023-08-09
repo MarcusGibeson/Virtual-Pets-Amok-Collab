@@ -55,4 +55,12 @@ public class PetShelter {
         }
     }
 
+    public void feedAllPets() {
+        for (Pet pet : shelterAnimals.values()) {
+            if (pet instanceof PetLive) {
+                ((PetLive) pet).feedPet();
+                System.out.println(pet.getName() + " has been fed.");
+            }
+    }
+}
 }
