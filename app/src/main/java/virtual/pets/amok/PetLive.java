@@ -24,13 +24,6 @@ public class PetLive extends Pet {
         this.thirst = thirst;
     }
 
-    public int getPlay() {
-        return play;
-    }
-
-    public void setPlay(int play) {
-        this.play = play;
-    }
 
 
 
