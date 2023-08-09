@@ -45,22 +45,125 @@ public class PetShelter {
     }
     
     /*
+    *  Find pet method to get name from pet values
+    */
+
+        private Pet findPet(String name) {
+        for (Pet pet : shelterAnimals.values()) {
+            if (pet.getName().equals(name)) {
+                return pet;
+            }
+        }
+        return null;
+    }
+    /*
      * Removes a specific pet
      */
-    public void adoptPet(Integer petID) throws Exception {
-        if (shelterAnimals.containsKey(petID)) {
-            shelterAnimals.remove(petID);
+    public void adoptPet(String name) throws Exception {
+        Pet pet = findPet(name);
+        if (pet != null) {
+            shelterAnimals.remove(pet.getPetID());
         } else {
-            throw new Exception("That pet does not exist in the shelter!");
+            throw new Exception("That pet does not exist in the shelter");
         }
     }
-
-    public void feedAllPets() {
-        for (Pet pet : shelterAnimals.values()) {
+    /*
+     * feeds all pets
+     */
+    public void feedAllPets(){
+        for(Pet pet: shelterAnimals.values()){
             if (pet instanceof PetLive) {
                 ((PetLive) pet).feedPet();
                 System.out.println(pet.getName() + " has been fed.");
             }
+        }
+    }
+    /*
+     * hydrates all pets
+     */
+    public void waterAllPets(){
+        for(Pet pet: shelterAnimals.values()){
+            if(pet instanceof PetLive){
+                ((PetLive) pet).hydratePet();
+                System.out.println(pet.getName() + " has been hydrated.");
+            }
+        }
+    }
+    /*
+     * Plays with one specific pet
+     */
+    public void playWithPet() throws Exception{
+        System.out.println("Select a Pet: ");
+        for(Pet pet:shelterAnimals.values()){
+            findPet(input.nextLine());
+            if(pet instanceof PetLive){
+                ((PetLive)pet).playPet();
+        System.out.println(pet.getName()+ " had fun!");}}
+    }
+    
+    public void cleanSingleLitter() {
+        for (Pet pet : shelterAnimals.values()) {
+            if(pet instanceof Cat) {
+                
+            }
+        }
+        
+        
+    }
+    
+
+    public void tickAll() {
+        for (Pet pet : shelterAnimals.values()) {
+            if(pet instanceof PetLive){
+                ((PetLive) pet).tick();
+                ((PetLive) pet).deathTick();
+            }
+        // else if (pet instanceof PetRobot) {
+        //         ((PetRobot) pet).robotTick();
+        // }
+        }
+        Pet pet = findPet("DEAD");
+        shelterAnimals.remove(pet.getPetID());
+            
+    }
+            
+            
+        
+    
+    
+    /*
+     * oil all robot pets
+     */
+    public void oilAllPets(){
+        for(Pet pet: shelterAnimals.values()){
+            if (pet instanceof PetRobot) {
+                ((PetRobot) pet).oilRobot();
+                System.out.println(pet.getName() + " has been oiled.");
+            }
+        }
+    }
+
+    /*
+     * repair all robot pets
+     */
+    public void repairAllPets(){
+        for(Pet pet: shelterAnimals.values()){
+            if (pet instanceof PetRobot) {
+                ((PetRobot) pet).repairRobot();
+                System.out.println(pet.getName() + " is all set.");
+            }
+        }
+    }
+        /*
+     * clean all robot pets
+     */
+    public void cleanAllPets(){
+        for(Pet pet: shelterAnimals.values()){
+            if (pet instanceof PetRobot) {
+                ((PetRobot) pet).repairRobot();
+                System.out.println(pet.getName() + " is all set.");
+            }
+        }
     }
 }
-}
+
