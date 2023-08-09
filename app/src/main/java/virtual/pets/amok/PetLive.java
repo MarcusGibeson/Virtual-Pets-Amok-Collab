@@ -32,9 +32,6 @@ public class PetLive extends Pet { // this should extend Pet
         this.play = play;
     }
 
-    @Override public String toString() {
-        return "Name: " + this.name + "\tHunger: " + this.feed  + " / 100" + "\tThirst: " + this.thirst + " / 100" + "Fun: " + this.play  + " / 100";
-    }
 
 
     public int getBoredom() {
