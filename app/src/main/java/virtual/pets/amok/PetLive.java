@@ -19,13 +19,25 @@ public class PetLive extends Pet {
         return thirst;
     }
 
-
     public void setThirst(int thirst) {
         this.thirst = thirst;
     }
 
+    public int getHunger() {
+        return hunger;
+    }
 
+    public void setHunger(int hunger) {
+        this.hunger = hunger;
+    }
 
+    public int getWaste() {
+        return waste;
+    }
+
+    public void setWaste(int waste) {
+        this.waste = waste;
+    }
 
     public int getBoredom() {
         return boredom;
