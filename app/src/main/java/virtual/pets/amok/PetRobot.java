@@ -102,5 +102,9 @@ public class PetRobot extends Pet {
         }
 
     }
-
+    @Override
+    public String toString() {
+        return "\nName: " + this.name + "\tOil " + this.oil + " / 100 " + "\tBattery: " + this.recharge + " / 100 "
+                + "\tDurability: " + this.repair + " / 100 " + "\n\t\tCleanliness: " + this.clean + " / 100";
+    }
 }
