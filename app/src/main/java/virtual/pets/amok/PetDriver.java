@@ -33,71 +33,6 @@ public class PetDriver {
                 PetShelter.addPet(DonFluffles);
 
                 while (!exitGameLoop) {
-<<<<<<< HEAD
-                PetShelter.showAllPets();
-                
-                String option = menu.mainMenu();
-                switch (option) {
-                        case "1" : {
-                                String liveValue = menu.livePetMenu();
-                                switch (liveValue) {
-                                        case "1" : {
-                                                //add cat
-                                                System.out.println("What is the name of the new pet?");
-                                                String nameInput = input.nextLine();
-                                                System.out.println("Describe the new pet: ");
-                                                String descriptionInput = input.nextLine();
-                                                Cat newCat = new Cat(nameInput, descriptionInput, 75, 75, 75, 75, false);
-                                                PetShelter.addPet(newCat);
-                                                System.out.println(nameInput + " was added to the shelter! Press enter to continue...");
-                                                input.nextLine();
-                                                break;
-                                        }
-                                        case "2" : {
-                                                //add dog
-                                                System.out.println("What is the name of the new pet?");
-                                                String nameInput = input.nextLine();
-                                                System.out.println("Describe the new pet: ");
-                                                String descriptionInput = input.nextLine();
-                                                Dog newDog = new Dog(nameInput, descriptionInput, 75, 75, 75, 75, false);
-                                                PetShelter.addPet(newDog);
-                                                System.out.println(nameInput + " was added to the shelter! Press enter to continue...");
-                                                input.nextLine();
-                                                break;
-                                        }
-                                        case "3" : {
-                                                //feed
-                                                break;
-                                        }
-                                        case "4" : {
-                                                //water
-                                                break;
-                                        }                                        
-                                        case "5" : {
-                                                //play
-                                                break;
-                                        }
-                                        case "6" : {
-                                                //adopt pet
-                                                break;
-                                        }
-                                        case "7" : {
-                                                //clean litter or cage
-                                                String catOrDog = menu.dogOrCatMenu();
-                                                switch (catOrDog) {
-                                                        case "1" : {
-                                                                //litter box
-                                                                break;
-                                                        }
-                                                        case "2" : {
-                                                                //dog cages
-                                                                break;
-                                                        }
-                                                        case "0" : {
-                                                                //exit
-                                                                break;
-                                                        }
-=======
                         PetShelter.showAllPets();
 
                         String option = menu.mainMenu();
@@ -183,7 +118,6 @@ public class PetDriver {
                                                         // Return to Main Menu
 
                                                         break;
->>>>>>> 0a9ffdee01a93209a0eac16689807c83141d0d9f
                                                 }
                                         }
                                         break;
@@ -242,18 +176,6 @@ public class PetDriver {
                         }
                 }
 
-<<<<<<< HEAD
-                        }
-                }
-                }
-
-
-
-                
-        }            
-
-}
-=======
         }
 
         public void addCat() throws Exception {
@@ -278,4 +200,3 @@ public class PetDriver {
                 input.nextLine();
         }
 }
->>>>>>> 0a9ffdee01a93209a0eac16689807c83141d0d9f
