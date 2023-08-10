@@ -167,9 +167,3 @@ public class PetShelter {
     }
 }
 
-<<<<<<< HEAD
-
-
-}
-=======
->>>>>>> 9885e4eb2d7e27c60947fc1a92db2f219a7ea572
