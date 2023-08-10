@@ -33,9 +33,12 @@ public class Cat extends PetLive {
     }
 
 
-    public void tick() {
+    public void catTick() {
+        hunger -= 3;
+        thirst += 1;
+        boredom += 3;
 
-        if (this.waste == 50) {
+        if (this.waste >= 50) { //How to make this prompt, when cat uses the litter box 3 times?
             System.out.println(this.name + " needs their litter box changed.");
         }
 

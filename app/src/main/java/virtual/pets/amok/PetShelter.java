@@ -56,6 +56,7 @@ public class PetShelter {
         }
         return null;
     }
+
     /*
      * Removes a specific pet
      */
@@ -101,14 +102,28 @@ public class PetShelter {
         System.out.println(pet.getName()+ " had fun!");}}
     }
     
-    public void cleanSingleLitter() {
+    public void cleanSingleLitter() throws Exception {
+        System.out.println("Which cat's litter box would you like to change?");
         for (Pet pet : shelterAnimals.values()) {
+            findPet(input.nextLine()); //Make a Cat List or a exception
             if(pet instanceof Cat) {
+            ((Cat)pet).cleanLitter();
                 
             }
         }
         
         
+    }
+
+    public void cleanSingleCage() throws Exception {
+        System.out.println("Which dog's cage would you like to clean?");
+        for (Pet pet : shelterAnimals.values()) {
+            if(pet instanceof Dog) {
+                ((Dog)pet).cleanCage();
+            }
+        }
+
+
     }
     
 
@@ -127,8 +142,6 @@ public class PetShelter {
             
     }
             
-            
-        
     
     
     /*
