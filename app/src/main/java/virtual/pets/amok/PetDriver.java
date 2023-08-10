@@ -21,10 +21,10 @@ public class PetDriver {
                 /*
                  * Creates starting pets in shelter (1 of each)
                  */
-                PetRobot Robodog = new PetRobot("Robodog", "A robot dog", 75, 75, 75, 75);
-                PetRobot Meowotron = new PetRobot("Meowotron", "A robot cat", 75, 75, 75, 75);
-                Dog Spot = new Dog("Spot", "A white dog with a brown spot", 75, 75, 75, 75, false);
-                Cat DonFluffles = new Cat("Don Fluffles", "Fluffiest cat ever", 75, 75, 75, 75, false);
+                PetRobot Robodog = new PetRobot("Robodog", "A robot dog", 20, 20, 20, 20);
+                PetRobot Meowotron = new PetRobot("Meowotron", "A robot cat", 20, 20, 20, 20);
+                Dog Spot = new Dog("Spot", "A white dog with a brown spot", 20, 20, 20, 20, false);
+                Cat DonFluffles = new Cat("Don Fluffles", "Fluffiest cat ever", 20, 20, 20, 20, false);
 
                 PetShelter.addPet(Robodog);
                 PetShelter.addPet(Meowotron);
