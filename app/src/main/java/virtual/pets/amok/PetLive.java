@@ -68,17 +68,17 @@ public class PetLive extends Pet {
     }
 
     public void tick() {
-        if (this.hunger < 80) {
+        if (this.hunger > 80) {
             System.out.println(this.name + " is starving!");
             System.out.println("Press enter to continue");
             input.nextLine();
         }
-        else if (this.thirst < 80) {
+        else if (this.thirst > 80) {
             System.out.println(this.name + " is parched!");
             System.out.println("Press enter to continue");
             input.nextLine();
         }
-        else if (this.boredom < 80) {
+        else if (this.boredom > 80) {
             System.out.println(this.name + " is dying of boredom!");
             System.out.println("Press enter to continue");
             input.nextLine();
