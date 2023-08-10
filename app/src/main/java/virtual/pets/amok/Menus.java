@@ -27,7 +27,7 @@ public class Menus {
         System.out.println("5. Play With Pet");
         System.out.println("6. Adopt out Pet");
         System.out.println("7. Clean litter box or cage");
-        System.out.println("0. Exit");
+        System.out.println("0. Return to Main Menu?");
         System.out.print("\nSelect an Option? ");
         
         String value = input.nextLine();
@@ -38,7 +38,7 @@ public class Menus {
     public String dogOrCatMenu() {
         System.out.println("1. Clean Cat Litter Boxes");
         System.out.println("2. Clean Dog cages");
-        System.out.println("0. Exit");
+        System.out.println("0. Return to Live Pet Menu?");
 
         String value = input.nextLine();
         return value;
@@ -50,9 +50,12 @@ public class Menus {
         System.out.println("1. Create Robot Pet");
         System.out.println("2. Recharge Battery");
         System.out.println("3. Give Pets Oil");
-        System.out.println("4. Destroy Robot Pet");
-        System.out.println("5. Return to Main Menu");
-        System.out.println("0. Exit");
+        System.out.println("4. Make Robot dance");
+        System.out.println("5. Make Robot shoot laser!");
+        System.out.println("6. Repair Robot pets");
+        System.out.println("7. Clean Robot pets");
+        System.out.println("8. Recycle Robot Pet");
+        System.out.println("0. Return to Main Menu?");
         System.out.print("\nSelect an Option? ");
         
         String value = input.nextLine();

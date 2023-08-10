@@ -5,13 +5,11 @@ public class Cat extends PetLive {
 
     private Boolean litterBox;
 
-
     public Cat(String name, String petDescription, int hunger, int thirst, int waste, int boredom, boolean litterBox) {
         super(name, petDescription, hunger, thirst, waste, boredom);
         this.litterBox = litterBox;
 
     }
-
 
     public Boolean getLitterBox() {
         return litterBox;
@@ -31,11 +29,23 @@ public class Cat extends PetLive {
 
     public void cleanLitter() {
         this.litterBox = false;
-        System.out.println("The litterbox is now clean.");
+        System.out.println("The litter box is now clean.");
     }
 
-    @Override public String toString() {
-        return "Name: " + this.name + "\tHunger: " + this.hunger + " / 100 " + "\tThirst: " + this.thirst + " / 100 " + "\tBoredom: " + this.boredom + " / 100 " + "\n\t\tLitter box dirty? " + this.litterBox;
+
+    public void tick() {
+
+        if (this.waste == 50) {
+            System.out.println(this.name + " needs their litter box changed.");
         }
+
+    }
+
+
+    @Override
+    public String toString() {
+        return "Name: " + this.name + "\tHunger: " + this.hunger + " / 100 " + "\tThirst: " + this.thirst + " / 100 "
+                + "\tBoredom: " + this.boredom + " / 100 " + "\n\t\tLitter box dirty? " + this.litterBox;
+    }
 }
 
