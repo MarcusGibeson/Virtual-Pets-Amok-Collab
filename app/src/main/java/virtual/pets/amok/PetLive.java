@@ -95,19 +95,15 @@ public class PetLive extends Pet {
             System.out.println(this.name + " has died from starvation...");
             System.out.println("Press enter to continue");
             input.nextLine();
-            this.name = "DEAD";
         } else if (this.thirst >= 100) {
             System.out.println(this.name + " has died from dehydration...");
             System.out.println("Press enter to continue");
             input.nextLine();
-            this.name = "DEAD";
         } else if (this.boredom >= 100) {
             System.out.println(this.name + " has died from dehydration...");
             System.out.println("Press enter to continue");
             input.nextLine();
-            this.name = "DEAD";
-
         }
-        
+        this.name = "DEAD";
     }
 }
