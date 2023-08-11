@@ -48,14 +48,25 @@ public class PetRobot extends Pet {
     public void setClean(int clean) {
         this.clean = clean;
     }
-
-        public void oilRobot() {
+    //robot pet actions
+    public void oilRobot() {
         oil += 10;
-        clean -= 2;
+        clean -= 5;
+        System.out.println("You spilled oil on "+this.name+".");
+    }
+    public void chargeRobot() {
+        recharge += 20;
+        repair -= 4;
+        oil -= 1;
+        if (recharge>60){
+            System.out.println("Be careful not to overcharge "+this.name+".");
+        }
     }
 
-    //robot pet actions
-        public void roboDance() {
+    public void robotDance()throws Exception {
+        Thread.sleep(1000);
+        System.out.println("Robots are syncing up. . .");
+        Thread.sleep(1000);
         recharge -= 20;
         oil -= 25;
         repair -=10;
@@ -63,7 +74,7 @@ public class PetRobot extends Pet {
         System.out.println("Domo Arigato Mister Roboto!");
     }
 
-    public void roboLaser() {
+    public void robotLaser() {
         recharge -= 35;
         oil -= 15;
         repair -=10;
@@ -81,6 +92,7 @@ public class PetRobot extends Pet {
         clean = 75;
         System.out.println("It has the new car smell! ");
     }
+
 
     //robot tick method
     public void robTick(){
@@ -106,5 +118,18 @@ public class PetRobot extends Pet {
     public String toString() {
         return "\nName: " + this.name + "\tOil " + this.oil + " / 100 " + "\tBattery: " + this.recharge + " / 100 "
                 + "\tDurability: " + this.repair + " / 100 " + "\n\t\tCleanliness: " + this.clean + " / 100";
+    }
+
+    public void deathRobotTick() {
+        if (this.repair == 0) {
+            System.out.println(this.name + " Robot is Damaged beyond Repair. Please take to Nearest Recycle Center");
+            // System.out.println("Press enter to continue");
+            // input.nextLine();
+        } else if (this.clean == 0) {
+            System.out.println(this.name + " is completely rusted, To0 much money to restore. Please take to Nearest Recycle Center");
+            // System.out.println("Press enter to continue");
+            // input.nextLine();
+        }
+        this.name = "DEAD";
     }
 }

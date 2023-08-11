@@ -151,7 +151,21 @@ public class PetShelter {
         shelterAnimals.remove(pet.getPetID());
 
     }
+<<<<<<< HEAD
 
+=======
+            
+            
+        
+    /*
+     * Remove robots
+     */
+    public void removePet(int bye)throws Exception{
+                Pet pet = getPet(bye);
+        shelterAnimals.remove(pet.getPetID());
+    }
+    
+>>>>>>> 41792ae4203f1e34fbfeca1266e140cfa059dacd
     /*
      * oil all robot pets
      */
@@ -159,6 +173,17 @@ public class PetShelter {
         for (Pet pet : shelterAnimals.values()) {
             if (pet instanceof PetRobot) {
                 ((PetRobot) pet).oilRobot();
+                System.out.println(pet.getName() + " has been oiled.");
+            }
+        }
+    }
+        /*
+     * charge all robot pets
+     */
+    public void chargeAllPets(){
+        for(Pet pet: shelterAnimals.values()){
+            if (pet instanceof PetRobot) {
+                ((PetRobot) pet).chargeRobot();
                 System.out.println(pet.getName() + " has been oiled.");
             }
         }
