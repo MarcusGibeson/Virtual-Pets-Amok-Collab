@@ -112,26 +112,32 @@ public class PetShelter {
         }
     }
 
+/*
+ * Picking a cat's litter box to change
+ */
     public void cleanSingleLitter() {
         System.out.println("Select a Cat");
         for (Pet pet : shelterAnimals.values()) {
-            findPet(input.nextLine()); // Make a Cat List or a exception
+            findPet(input.nextLine()); // Make a Cat List?
             if (pet instanceof Cat) {
                 ((Cat) pet).cleanLitter();
-                ((Cat) pet).catTick();
+                ((Cat) pet).catTick();// Not sure if tick is in proper place
 
             }
         }
 
     }
 
+    /*
+     * Picking a dog cage to clean
+     */
     public void cleanSingleCage() {
         System.out.println("Select a Dog");
         for (Pet pet : shelterAnimals.values()) {
-            findPet(input.nextLine()); // Make a Dog List or a exception
+            findPet(input.nextLine()); // Make a Dog List?
             if (pet instanceof Dog) {
                 ((Dog) pet).cleanCage();
-                ((Dog) pet).dogTick();
+                ((Dog) pet).dogTick();// Not sure if tick is in proper place
             }
         }
 
@@ -151,21 +157,15 @@ public class PetShelter {
         shelterAnimals.remove(pet.getPetID());
 
     }
-<<<<<<< HEAD
 
-=======
-            
-            
-        
     /*
      * Remove robots
      */
-    public void removePet(int bye)throws Exception{
-                Pet pet = getPet(bye);
+    public void removePet(int bye) throws Exception {
+        Pet pet = getPet(bye);
         shelterAnimals.remove(pet.getPetID());
     }
-    
->>>>>>> 41792ae4203f1e34fbfeca1266e140cfa059dacd
+
     /*
      * oil all robot pets
      */
@@ -177,11 +177,12 @@ public class PetShelter {
             }
         }
     }
-        /*
+
+    /*
      * charge all robot pets
      */
-    public void chargeAllPets(){
-        for(Pet pet: shelterAnimals.values()){
+    public void chargeAllPets() {
+        for (Pet pet : shelterAnimals.values()) {
             if (pet instanceof PetRobot) {
                 ((PetRobot) pet).chargeRobot();
                 System.out.println(pet.getName() + " has been oiled.");

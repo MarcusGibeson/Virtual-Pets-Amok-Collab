@@ -37,6 +37,8 @@ public class Dog extends PetLive {
 }
 
     public void dogTick() {
+
+        //Need a trigger for useCage whenever dog poops in cage 3 times.
     
         if (this.waste > 80) {
             System.out.println(this.name + " needs their cage cleaned!");

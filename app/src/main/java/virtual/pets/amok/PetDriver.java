@@ -159,14 +159,9 @@ public class PetDriver {
                                                         newRobot.robotLaser();
                                                         break;
                                                 }
-<<<<<<< HEAD
-                                                case "6": {
-                                                        // Recycle Robot Pet
-=======
                                                 case "6":{
                                                         newRobot.repairRobot();;
                                                         break;
->>>>>>> 41792ae4203f1e34fbfeca1266e140cfa059dacd
                                                 }
                                                 case "7":{
                                                         newRobot.cleanRobot();
