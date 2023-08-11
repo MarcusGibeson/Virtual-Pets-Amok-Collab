@@ -40,7 +40,7 @@ public class PetShelter {
     public void showAllPets() {
         System.out.println();
         System.out.println();
-        System.out.println("PET SHELTER: PET'S STATUS");
+        System.out.println("VIRTUAL PET SHELTER: PET'S STATUS");
         System.out.println("-----------------------------------------------------------------------------");
         for (Integer pet : shelterAnimals.keySet()) {
             System.out.println(shelterAnimals.get(pet));
