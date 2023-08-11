@@ -63,7 +63,10 @@ public class PetRobot extends Pet {
         }
     }
 
-    public void robotDance() {
+    public void robotDance()throws Exception {
+        Thread.sleep(1000);
+        System.out.println("Robots are syncing up. . .");
+        Thread.sleep(1000);
         recharge -= 20;
         oil -= 25;
         repair -=10;
