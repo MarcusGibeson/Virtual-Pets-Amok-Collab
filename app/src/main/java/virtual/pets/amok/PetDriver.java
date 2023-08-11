@@ -129,7 +129,7 @@ public class PetDriver {
                                         String robotValue = menu.robotPetMenu();
                                         String nameInput = "";
                                         String descriptionInput = "";
-                                        PetRobot newRobot = new PetRobot(nameInput, descriptionInput,75,75,75,75);
+                                        PetRobot newRobot = new PetRobot(nameInput, descriptionInput,20,20,20,20);
                                         switch (robotValue) {
                                                 case "1": {
                                                         // add Robot pet
@@ -202,7 +202,7 @@ public class PetDriver {
                 String nameInput = input.nextLine();
                 System.out.println("Describe the new pet: ");
                 String descriptionInput = input.nextLine();
-                Cat newCat = new Cat(nameInput, descriptionInput, 75, 75, 75, 75, false);
+                Cat newCat = new Cat(nameInput, descriptionInput, 20, 20, 20, 20, false);
                 PetShelter.addPet(newCat);
                 System.out.println(nameInput + " was added to the shelter! Press enter to continue...");
                 input.nextLine();
@@ -213,7 +213,7 @@ public class PetDriver {
                 String nameInput = input.nextLine();
                 System.out.println("Describe the new pet: ");
                 String descriptionInput = input.nextLine();
-                Dog newDog = new Dog(nameInput, descriptionInput, 75, 75, 75, 75, false);
+                Dog newDog = new Dog(nameInput, descriptionInput, 20, 20, 20, 20, false);
                 PetShelter.addPet(newDog);
                 System.out.println(nameInput + " was added to the shelter! Press enter to continue...");
                 input.nextLine();

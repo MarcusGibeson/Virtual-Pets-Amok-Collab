@@ -39,7 +39,7 @@ public class Cat extends PetLive {
         
         //Need a trigger for useLitterBox whenever cat uses litter 3 times
 
-        if (this.waste > 80) {
+        if (this.litterBox = true) {
             System.out.println(this.name + " needs their litter box changed!");
         } 
 
