@@ -18,14 +18,13 @@ public class PetDriver {
                 boolean exitGameLoop = false;
                 Menus menu = new Menus();
 
-
                 /*
                  * Creates starting pets in shelter (1 of each)
                  */
-                PetRobot Robodog = new PetRobot("Robodog", "A robot dog", 75, 75, 75, 75);
-                PetRobot Meowotron = new PetRobot("Meowotron", "A robot cat", 75, 75, 75, 75);
-                Dog Spot = new Dog("Spot", "A white dog with a brown spot", 75, 75, 75, 75, false);
-                Cat DonFluffles = new Cat("Don Fluffles", "Fluffiest cat ever", 75, 75, 75, 75, false);
+                PetRobot Robodog = new PetRobot("Robodog", "A robot dog", 20, 20, 20, 20);
+                PetRobot Meowotron = new PetRobot("Meowotron", "A robot cat", 20, 20, 20, 20);
+                Dog Spot = new Dog("Spot", "A white dog with a brown spot", 20, 20, 20, 20, true);
+                Cat DonFluffles = new Cat("Don Fluffles", "Fluffiest cat ever", 20, 20, 20, 20, false);
 
                 PetShelter.addPet(Robodog);
                 PetShelter.addPet(Meowotron);
@@ -37,8 +36,10 @@ public class PetDriver {
 
                         String option = menu.mainMenu();
                         PetShelter.tickAll();
+
                         switch (option) {
                                 case "1": {
+                                        
                                         String liveValue = menu.livePetMenu();
                                         switch (liveValue) {
                                                 case "1": {
@@ -46,7 +47,7 @@ public class PetDriver {
                                                         addCat();
                                                         // System.out.println("What is the name of the new pet?");
                                                         // String nameInput = input.nextLine();
-                                                        // System.out.println("Descripe the new pet: ");
+                                                        // System.out.println("Describe the new pet: ");
                                                         // String descriptionInput = input.nextLine();
                                                         // Cat newCat = new Cat(nameInput, descriptionInput, 75, 75, 75,
                                                         // 75, false);
@@ -61,7 +62,7 @@ public class PetDriver {
                                                         addDog();
                                                         // System.out.println("What is the name of the new pet?");
                                                         // String nameInput = input.nextLine();
-                                                        // System.out.println("Descripe the new pet: ");
+                                                        // System.out.println("Describe the new pet: ");
                                                         // String descriptionInput = input.nextLine();
                                                         // Dog newDog = new Dog(nameInput, descriptionInput, 75, 75, 75,
                                                         // 75, false);
@@ -99,24 +100,26 @@ public class PetDriver {
                                                         switch (catOrDog) {
                                                                 case "1": {
                                                                         // litter box
+                                                                        PetShelter.cleanSingleLitter();
 
                                                                         break;
                                                                 }
                                                                 case "2": {
                                                                         // dog cages
+                                                                        PetShelter.cleanSingleCage();
                                                                         break;
                                                                 }
                                                                 case "0": {
                                                                         // Return to Live Pet Menu
 
+
                                                                         break;
                                                                 }
-                                                        }
+                                                        } 
                                                         break;
                                                 }
                                                 case "0": {
                                                         // Return to Main Menu
-
                                                         break;
                                                 }
                                         }
@@ -124,15 +127,16 @@ public class PetDriver {
                                 }
                                 case "2": {
                                         String robotValue = menu.robotPetMenu();
+                                        String nameInput = "";
+                                        String descriptionInput = "";
+                                        PetRobot newRobot = new PetRobot(nameInput, descriptionInput,75,75,75,75);
                                         switch (robotValue) {
                                                 case "1": {
                                                         // add Robot pet
                                                         System.out.println("What is the name of the model pet?");
-                                                        String nameInput = input.nextLine();
+                                                        nameInput= input.nextLine();
                                                         System.out.println("Describe the new pet: ");
-                                                        String descriptionInput = input.nextLine();
-                                                        PetRobot newRobot = new PetRobot(nameInput, descriptionInput,
-                                                                        75, 75, 75, 75);
+                                                        descriptionInput = input.nextLine();
                                                         PetShelter.addPet(newRobot);
                                                         System.out.println(nameInput
                                                                         + " was added to the shelter! Press enter to continue...");
@@ -140,24 +144,39 @@ public class PetDriver {
                                                         break;
                                                 }
                                                 case "2": {
-                                                        // recharge battery
+                                                        newRobot.chargeRobot();
                                                         break;
                                                 }
                                                 case "3": {
-                                                        // oil pets
+                                                        newRobot.oilRobot();
                                                         break;
                                                 }
                                                 case "4": {
-                                                        // destroy robot
+                                                        newRobot.robotDance();
                                                         break;
                                                 }
                                                 case "5": {
-                                                        // shoot laser
+                                                        newRobot.robotLaser();
                                                         break;
                                                 }
                                                 case "6":{
-                                                        // Recycle Robot Pet
+                                                        newRobot.repairRobot();;
+                                                        break;
                                                 }
+                                                case "7":{
+                                                        newRobot.cleanRobot();
+                                                        break;
+                                                }
+                                                // case "8":{
+                                                //         // recycle robot
+                                                //         System.out.println("Please choose which Robot you will like to Destroy");
+                                                //         PetShelter.showAllPets();
+                                                //         int choice = input.nextInt();
+                                                //         int chosen = PetShelter.getPet(choice);
+                                                //         System.out.println(" We Will Recycle "+chosen+".");
+                                                //         PetShelter.removePet(chosen);
+                                                //         break;
+                                                // }
                                                 case "0": {
                                                         // Return to main menu
                                                         break;
@@ -181,7 +200,7 @@ public class PetDriver {
         public void addCat() throws Exception {
                 System.out.println("What is the name of the new pet?");
                 String nameInput = input.nextLine();
-                System.out.println("Descripe the new pet: ");
+                System.out.println("Describe the new pet: ");
                 String descriptionInput = input.nextLine();
                 Cat newCat = new Cat(nameInput, descriptionInput, 75, 75, 75, 75, false);
                 PetShelter.addPet(newCat);
@@ -192,9 +211,9 @@ public class PetDriver {
         public void addDog() throws Exception {
                 System.out.println("What is the name of the new pet?");
                 String nameInput = input.nextLine();
-                System.out.println("Descripe the new pet: ");
+                System.out.println("Describe the new pet: ");
                 String descriptionInput = input.nextLine();
-                Dog newDog = new Dog(nameInput, descriptionInput, 75, 75, 75,75, false);
+                Dog newDog = new Dog(nameInput, descriptionInput, 75, 75, 75, 75, false);
                 PetShelter.addPet(newDog);
                 System.out.println(nameInput + " was added to the shelter! Press enter to continue...");
                 input.nextLine();

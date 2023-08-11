@@ -31,11 +31,23 @@ public class Dog extends PetLive {
     }
 
     public void cleanCage() {
-        this.dirtyCage = false;
+        if (this.dirtyCage = false) {
         System.out.println(this.name + "'s cage is now clean!");
+    } else {
+        System.out.println(this.name + "'s cage doesn't need to be cleaned right now.");
+    }
+}
+
+    public void dogTick() {
+
+        //Need a trigger for useCage whenever dog poops in cage 3 times.
+    
+        if (this.waste > 80) {
+            System.out.println(this.name + " needs their cage cleaned!");
+        }
     }
 
     @Override public String toString() {
-        return "Name: " + this.name + "\tHunger: " + this.hunger + " / 100 " + "\tThirst: " + this.thirst + " / 100 " + "\tBoredom: " + this.boredom + " / 100 " + "\n\t\tCage dirty? " + this.dirtyCage;
+        return "\nName: " + this.name + "\tHunger: " + this.hunger + " / 100 " + "\tThirst: " + this.thirst + " / 100 " + "\tBoredom: " + this.boredom + " / 100 " + "\n\t\tCage dirty? " + this.dirtyCage;
         }
 }

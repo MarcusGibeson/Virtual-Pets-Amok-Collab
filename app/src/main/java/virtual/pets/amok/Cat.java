@@ -28,23 +28,26 @@ public class Cat extends PetLive {
     }
 
     public void cleanLitter() {
-        this.litterBox = false;
-        System.out.println("The litter box is now clean.");
-    }
-
-
-    public void tick() {
-
-        if (this.waste == 50) {
-            System.out.println(this.name + " needs their litter box changed.");
+        if (this.litterBox = false) {
+            System.out.println(this.name + "'s litter box is now clean.");
+        } else {
+            System.out.println(this.name + "'s litter box doesn't need to be cleaned right now.");
         }
-
     }
 
+    public void catTick() {
+        
+        //Need a trigger for useLitterBox whenever cat uses litter 3 times
+
+        if (this.waste > 80) {
+            System.out.println(this.name + " needs their litter box changed!");
+        } 
+
+    }
 
     @Override
     public String toString() {
-        return "Name: " + this.name + "\tHunger: " + this.hunger + " / 100 " + "\tThirst: " + this.thirst + " / 100 "
+        return "\nName: " + this.name + "\tHunger: " + this.hunger + " / 100 " + "\tThirst: " + this.thirst + " / 100 "
                 + "\tBoredom: " + this.boredom + " / 100 " + "\n\t\tLitter box dirty? " + this.litterBox;
     }
 }
