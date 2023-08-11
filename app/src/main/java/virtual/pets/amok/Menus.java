@@ -54,7 +54,7 @@ public class Menus {
         System.out.println("5. Make Robot shoot laser!");
         System.out.println("6. Repair Robot pets");
         System.out.println("7. Clean Robot pets");
-        // System.out.println("8. Recycle Robot Pet");
+        System.out.println("8. Recycle Robot Pet");
         System.out.println("0. Return to Main Menu?");
         System.out.print("\nSelect an Option? ");
         
