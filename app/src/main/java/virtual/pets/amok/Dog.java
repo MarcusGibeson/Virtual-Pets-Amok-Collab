@@ -29,8 +29,18 @@ public class Dog extends PetLive {
     }
 
     public void cleanCage() {
-        this.dirtyCage = false;
+        if (this.dirtyCage = false) {
         System.out.println(this.name + "'s cage is now clean!");
+    } else {
+        System.out.println(this.name + "'s cage doesn't need to be cleaned right now.");
+    }
+}
+
+    public void dogTick() {
+    
+        if (this.waste > 80) {
+            System.out.println(this.name + " needs their cage cleaned!");
+        }
     }
 
     @Override public String toString() {

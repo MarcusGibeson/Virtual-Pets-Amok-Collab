@@ -28,22 +28,21 @@ public class Cat extends PetLive {
     }
 
     public void cleanLitter() {
-        this.litterBox = false;
-        System.out.println("The litter box is now clean.");
+        if (this.litterBox = false) {
+            System.out.println(this.name + "'s litter box is now clean.");
+        } else {
+            System.out.println(this.name + "'s litter box doesn't need to be cleaned right now.");
+        }
     }
-
 
     public void catTick() {
-        hunger -= 3;
-        thirst += 1;
-        boredom += 3;
+        
 
-        if (this.waste >= 50) { //How to make this prompt, when cat uses the litter box 3 times?
-            System.out.println(this.name + " needs their litter box changed.");
-        }
+        if (this.waste > 80) {
+            System.out.println(this.name + " needs their litter box changed!");
+        } 
 
     }
-
 
     @Override
     public String toString() {

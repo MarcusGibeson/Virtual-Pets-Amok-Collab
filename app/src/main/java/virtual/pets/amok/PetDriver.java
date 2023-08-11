@@ -18,13 +18,12 @@ public class PetDriver {
                 boolean exitGameLoop = false;
                 Menus menu = new Menus();
 
-
                 /*
                  * Creates starting pets in shelter (1 of each)
                  */
                 PetRobot Robodog = new PetRobot("Robodog", "A robot dog", 20, 20, 20, 20);
                 PetRobot Meowotron = new PetRobot("Meowotron", "A robot cat", 20, 20, 20, 20);
-                Dog Spot = new Dog("Spot", "A white dog with a brown spot", 20, 20, 20, 20, false);
+                Dog Spot = new Dog("Spot", "A white dog with a brown spot", 20, 20, 20, 20, true);
                 Cat DonFluffles = new Cat("Don Fluffles", "Fluffiest cat ever", 20, 20, 20, 20, false);
 
                 PetShelter.addPet(Robodog);
@@ -37,8 +36,10 @@ public class PetDriver {
 
                         String option = menu.mainMenu();
                         PetShelter.tickAll();
+
                         switch (option) {
                                 case "1": {
+                                        
                                         String liveValue = menu.livePetMenu();
                                         switch (liveValue) {
                                                 case "1": {
@@ -99,24 +100,26 @@ public class PetDriver {
                                                         switch (catOrDog) {
                                                                 case "1": {
                                                                         // litter box
+                                                                        PetShelter.cleanSingleLitter();
 
                                                                         break;
                                                                 }
                                                                 case "2": {
                                                                         // dog cages
+                                                                        PetShelter.cleanSingleCage();
                                                                         break;
                                                                 }
                                                                 case "0": {
                                                                         // Return to Live Pet Menu
 
+
                                                                         break;
                                                                 }
-                                                        }
+                                                        } 
                                                         break;
                                                 }
                                                 case "0": {
                                                         // Return to Main Menu
-
                                                         break;
                                                 }
                                         }
@@ -155,7 +158,7 @@ public class PetDriver {
                                                         // shoot laser
                                                         break;
                                                 }
-                                                case "6":{
+                                                case "6": {
                                                         // Recycle Robot Pet
                                                 }
                                                 case "0": {
@@ -194,7 +197,7 @@ public class PetDriver {
                 String nameInput = input.nextLine();
                 System.out.println("Descripe the new pet: ");
                 String descriptionInput = input.nextLine();
-                Dog newDog = new Dog(nameInput, descriptionInput, 75, 75, 75,75, false);
+                Dog newDog = new Dog(nameInput, descriptionInput, 75, 75, 75, 75, false);
                 PetShelter.addPet(newDog);
                 System.out.println(nameInput + " was added to the shelter! Press enter to continue...");
                 input.nextLine();

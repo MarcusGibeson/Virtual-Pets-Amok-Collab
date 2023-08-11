@@ -2,8 +2,8 @@ package virtual.pets.amok;
 
 import java.util.Scanner;
 
-public class PetLive extends Pet { 
-    
+public class PetLive extends Pet {
+
     Scanner input = new Scanner(System.in);
     public int hunger;
     public int thirst;
@@ -54,17 +54,24 @@ public class PetLive extends Pet {
         hunger -= 5;
         thirst += 2;
         boredom += 2;
+        waste += 5;
+
     }
 
     public void hydratePet() {
         thirst -= 5;
         hunger += 2;
         boredom += 2;
+        waste += 2;
+
     }
-    public void playPet(){
+
+    public void playPet() {
         thirst += 5;
         hunger += 5;
         boredom -= 10;
+        waste -= 3;
+
     }
 
     public void tick() {
@@ -72,13 +79,11 @@ public class PetLive extends Pet {
             System.out.println(this.name + " is starving!");
             System.out.println("Press enter to continue");
             input.nextLine();
-        }
-        else if (this.thirst > 80) {
+        } else if (this.thirst > 80) {
             System.out.println(this.name + " is parched!");
             System.out.println("Press enter to continue");
             input.nextLine();
-        }
-        else if (this.boredom > 80) {
+        } else if (this.boredom > 80) {
             System.out.println(this.name + " is dying of boredom!");
             System.out.println("Press enter to continue");
             input.nextLine();
