@@ -121,7 +121,7 @@ public class PetShelter {
             findPet(input.nextLine()); // Make a Cat List?
             if (pet instanceof Cat) {
                 ((Cat) pet).cleanLitter();
-                ((Cat) pet).catTick();// Not sure if tick is in proper place
+                //((Cat) pet).catTick(); Not sure if tick is in proper place
 
             }
         }
@@ -137,7 +137,7 @@ public class PetShelter {
             findPet(input.nextLine()); // Make a Dog List?
             if (pet instanceof Dog) {
                 ((Dog) pet).cleanCage();
-                ((Dog) pet).dogTick();// Not sure if tick is in proper place
+               // ((Dog) pet).dogTick(); Not sure if tick is in proper place
             }
         }
 
@@ -213,8 +213,4 @@ public class PetShelter {
             }
         }
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> df8b44d97ae1fb687432222c0f1ea048d6380e75
