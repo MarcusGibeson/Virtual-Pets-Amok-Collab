@@ -10,8 +10,8 @@ public class PetLive extends Pet {
     public int waste;
     public int boredom;
 
-    public PetLive(String name, String petDescription, int hunger, int thirst, int waste, int boredom) {
-        super(name, petDescription,true);
+    public PetLive(String name, String petDescription, int hunger, boolean feline, int thirst, int waste, int boredom) {
+        super(name, petDescription,true,true);
         this.hunger = hunger;
         this.waste = waste;
         this.boredom = boredom;

@@ -53,22 +53,19 @@ public class PetShelter {
      * Find pet method to get name from pet values
      */
 
+    // private String findAPet(String testName){
 
-// private String findAPet(String testName){
+    // for (Pet name : shelterAnimals.values()) {
+    // if (name.getName().equals(testName)) {
+    // return name;
+    // }else{
+    // String not = "Not found";
+    // }
+    // return not;
 
-//             for (Pet name : shelterAnimals.values()) {
-//             if (name.getName().equals(testName)) {
-//                 return name;
-//             }else{
-//     String not = "Not found";
-//             }
-//     return not;
+    // }}
 
-
-// }}
-
-
-    private Pet findPet(String name)throws Exception{
+    private Pet findPet(String name) throws Exception {
         for (Pet pet : shelterAnimals.values()) {
             if (pet.getName().equals(name)) {
                 return pet;
@@ -128,27 +125,27 @@ public class PetShelter {
     /*
      * Plays with one specific pet
      */
-    public void playWithPet()throws Exception  {
+    public void playWithPet() throws Exception {
 
         System.out.println("Which pet would you like to play with? ");
         for (Pet pet : shelterAnimals.values()) {
             String chosenPet = input.nextLine();
             Pet truePet = findPet(chosenPet);
             // if (truePet.isOrganic()) {
-                if(truePet != null){
+            if (truePet != null) {
                 ((PetLive) truePet).playPet();
-                System.out.println(truePet.getName() + " had fun!!!!");}
-                else{
-                    System.out.println("that pet does not exist");
-                    break;
-                }
-                
-                return;
+                System.out.println(truePet.getName() + " had fun!!!!");
+            } else {
+                System.out.println("that pet does not exist");
+
+            }
+
+            return;
             // }else if(truePet.equals(null)){
-            //     System.out.println("Pet cannot be found.");
+            // System.out.println("Pet cannot be found.");
             // }
-                // throw new Exception ("Pet could not be found.");
-        
+            // throw new Exception ("Pet could not be found.");
+
         }
 
     }
@@ -169,34 +166,46 @@ public class PetShelter {
     /*
      * Picking a cat's litter box to change
      */
-    public void cleanSingleLitter() throws Exception{
-        System.out.println("Select a Cat");
+    public void cleanSingleLitter() throws Exception {
+        System.out.println("Select a Cat's litter box to clean.");
         for (Pet pet : shelterAnimals.values()) {
-            findPet(input.nextLine()); 
-            if (pet instanceof Cat) {
-                ((Cat) pet).cleanLitter();
-
+            String chosenPet = input.nextLine();
+            Pet truePet = findPet(chosenPet);
+            if (truePet instanceof PetLive) {
+                if ((truePet != null)) {
+                    ((Cat) truePet).cleanLitter(truePet.isFeline());
+                }
+            else
+                System.out.println("that pet does not have a litter box");
             }
+            return;
         }
     }
 
     /*
      * Picking a dog cage to clean
      */
-    public void cleanSingleCage()throws Exception {
-        System.out.println("Select a Dog");
+    public void cleanSingleCage() throws Exception {
+        System.out.println("Select a Dog's cage to clean.");
         for (Pet pet : shelterAnimals.values()) {
-            findPet(input.nextLine()); 
-            if (pet instanceof Dog) {
-                ((Dog) pet).cleanCage();
+            String chosenPet = input.nextLine();
+            Pet truePet = findPet(chosenPet);
+            if (truePet instanceof PetLive) {
+                if ((truePet != null)) {
+                    ((Dog) truePet).cleanCage(truePet.isFeline());
+                }
+            } else {
+                System.out.println("that pet does not have a cage");
             }
-        }
 
+            return;
+
+        }
     }
 
     public void tickAll() {
         for (Pet pet : shelterAnimals.values()) {
-            if (pet instanceof PetLive) {
+            if (pet instanceof Dog) {
                 ((PetLive) pet).tick();
                 // ((PetLive) pet).deathTick();
                 if (pet instanceof Cat) {

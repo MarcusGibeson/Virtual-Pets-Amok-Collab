@@ -9,7 +9,7 @@ public class PetRobot extends Pet {
     //
 
     public PetRobot(String name, String petDescription, int oil, int recharge, int repair, int clean) {
-        super(name, petDescription,false);
+        super(name, petDescription,false,false);
         this.oil = oil;
         this.recharge = recharge;
         this.repair = repair;

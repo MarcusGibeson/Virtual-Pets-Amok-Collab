@@ -1,23 +1,19 @@
 package virtual.pets.amok;
 
-
-    //dog class extending live pet for cage cleaning
+//dog class extending live pet for cage cleaning
 public class Dog extends PetLive {
 
     private boolean dirtyCage;
     private int dogPoopCounter;
     private int poopInCage;
-    
-
 
     public Dog(String name, String petDescription, int hunger, int thirst, int waste, int boredom, boolean dirtyCage) {
-        super(name, petDescription, hunger, thirst, waste, boredom);
+        super(name, petDescription, hunger, false, thirst, waste, boredom);
         this.dirtyCage = dirtyCage;
-        this.poopInCage = dogPoopCounter ++;
+        this.poopInCage = dogPoopCounter++;
 
-    
-}    
-    
+    }
+
     public boolean isDirtyCage() {
         return dirtyCage;
     }
@@ -27,36 +23,41 @@ public class Dog extends PetLive {
     }
 
     public void useCage() {
-        if (this.waste == 40) {
-            this.dirtyCage = true;
+        if (this.waste >= 20) {
             this.waste = 0;
-            this.poopInCage += 1;
+            this.poopInCage++;
             System.out.println(this.name + " just pooped in their cage.");
         }
     }
 
-    public void cleanCage() {
-        if (this.dirtyCage = false) {
+    public void cleanCage(boolean feline) {
+        
+        if (this.dirtyCage = true) {
             this.poopInCage = 0;
-        System.out.println(this.name + "'s cage is now clean!");
-    } else {
-        System.out.println(this.name + "'s cage doesn't need to be cleaned right now.");
+            System.out.println(this.name + "'s cage is now clean!");
+        } else {
+            System.out.println(this.name + "'s cage doesn't need to be cleaned right now.");
+        }
+        
     }
-}
 
     public void dogTick() {
+        this.waste += 5;
+        useCage();
 
-    
         // if (this.dirtyCage = true) {
-        //     System.out.println(this.name + " needs their cage cleaned!");
+        // System.out.println(this.name + " needs their cage cleaned!");
         // }
 
-        if (this.poopInCage == 5) {
+        if (this.poopInCage >= 3) {
+            this.dirtyCage = true;
             System.out.println(this.name + " needs their cage cleaned!");
         }
     }
 
-    @Override public String toString() {
-        return "\nName: " + this.name + "\tHunger: " + this.hunger + " / 100 " + "\tThirst: " + this.thirst + " / 100 " + "\tBoredom: " + this.boredom + " / 100 " + "\n\t\tCage dirty? " + this.dirtyCage;
-        }
+    @Override
+    public String toString() {
+        return "\nName: " + this.name + "\tHunger: " + this.hunger + " / 100 " + "\tThirst: " + this.thirst + " / 100 "
+                + "\tBoredom: " + this.boredom + " / 100 " + "\n\t\tCage dirty? " + this.dirtyCage;
+    }
 }

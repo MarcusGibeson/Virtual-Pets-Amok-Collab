@@ -6,16 +6,29 @@ public abstract class Pet {
     public String name;
     public String petDescription;
     private boolean organic;
-    
-    public Pet(String name, String petDescription,boolean organic) {
+    private boolean feline;
+
+    public Pet(String name, String petDescription, boolean organic, boolean feline) {
         this.name = name;
         this.petDescription = petDescription;
         this.petID = petCounter++;
         this.organic = organic;
+        this.feline = feline;
     }
-    public boolean isOrganic(){
+
+    public boolean isFeline() {
+        return feline;
+    }
+
+    public void setFeline(boolean feline) {
+        this.feline = feline;
+
+    }
+
+    public boolean isOrganic() {
         return organic;
     }
+
     public String getName() {
         return name;
     }
@@ -36,7 +49,7 @@ public abstract class Pet {
         this.petDescription = petDescription;
     }
 
-    public void petDescription () {
+    public void petDescription() {
         System.out.println("Name: " + this.name + "\tDescription: " + this.petDescription + "\tID: " + this.petID);
     }
 
