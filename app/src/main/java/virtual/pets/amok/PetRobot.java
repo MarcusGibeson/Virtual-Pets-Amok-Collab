@@ -97,20 +97,20 @@ public class PetRobot extends Pet {
 
     // robot tick method
     public void robTick() {
-        recharge -= 4;
-        oil -= 2;
-        clean -= 7;
+        this.recharge -= 4;
+        this.oil -= 2;
+        this.clean -= 7;
 
-        if (oil <= 15) {
+        if (this.oil <= 15) {
             System.out.println(this.name + " System Alert: Low oil Detected!");
         }
-        if (recharge <= 5) {
+        if (this.recharge <= 5) {
             System.out.println(this.name + " System Alert : Low Battery, Please Charge!");
         }
-        if (repair >= 85) {
+        if (this.repair >= 85) {
             System.out.println(this.name + " System Alert : Malfunction Detected!");
         }
-        if (clean <= 10) {
+        if (this.clean <= 10) {
             System.out.println(this.name + " System Alert : Sensor Block Detected!");
         }
 
