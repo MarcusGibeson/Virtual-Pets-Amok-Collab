@@ -4,11 +4,13 @@ package virtual.pets.amok;
 public class Cat extends PetLive {
 
     private Boolean litterBox;
+    private int poopCounter;
+    private int poopInBox;
 
     public Cat(String name, String petDescription, int hunger, int thirst, int waste, int boredom, boolean litterBox) {
         super(name, petDescription, hunger, thirst, waste, boredom);
         this.litterBox = litterBox;
-
+        this.poopInBox = poopCounter++;
     }
 
     public Boolean getLitterBox() {
@@ -20,15 +22,18 @@ public class Cat extends PetLive {
     }
 
     public void useLitterBox() {
-        if (this.waste == 100) {
+        if (this.waste == 20) {
             this.litterBox = true;
             this.waste = 0;
+            this.poopInBox = 1;
             System.out.println(this.name + " just used the litter box.");
         }
     }
 
+
     public void cleanLitter() {
         if (this.litterBox = false) {
+            this.poopInBox = 0;
             System.out.println(this.name + "'s litter box is now clean.");
         } else {
             System.out.println(this.name + "'s litter box doesn't need to be cleaned right now.");
@@ -36,14 +41,16 @@ public class Cat extends PetLive {
     }
 
     public void catTick() {
-        
-        //Need a trigger for useLitterBox whenever cat uses litter 3 times
 
-        if (this.litterBox = true) {
+        // if (this.litterBox = true) {
+        //     System.out.println(this.name + " needs their litter box changed!");
+        // }
+
+        if(this.poopInBox == 5){
             System.out.println(this.name + " needs their litter box changed!");
-        } 
+        }
+        }
 
-    }
 
     @Override
     public String toString() {
@@ -51,4 +58,3 @@ public class Cat extends PetLive {
                 + "\tBoredom: " + this.boredom + " / 100 " + "\n\t\tLitter box dirty? " + this.litterBox;
     }
 }
-

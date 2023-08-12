@@ -53,13 +53,39 @@ public class PetShelter {
      * Find pet method to get name from pet values
      */
 
-    private Pet findPet(String name) {
+
+// private String findAPet(String testName){
+
+//             for (Pet name : shelterAnimals.values()) {
+//             if (name.getName().equals(testName)) {
+//                 return name;
+//             }else{
+//     String not = "Not found";
+//             }
+//     return not;
+
+
+// }}
+
+
+    private Pet findPet(String name)throws Exception{
         for (Pet pet : shelterAnimals.values()) {
             if (pet.getName().equals(name)) {
                 return pet;
             }
         }
         return null;
+        // return findPet(name);
+        // throw new Exception ("Pet could not be found.");
+    }
+    /*
+     * /* Show pet descriptions
+     */
+
+    public void showDescriptions() {
+        for (Pet pet : shelterAnimals.values()) {
+            pet.petDescription();
+        }
     }
 
     /*
@@ -81,6 +107,7 @@ public class PetShelter {
         for (Pet pet : shelterAnimals.values()) {
             if (pet instanceof PetLive) {
                 ((PetLive) pet).feedPet();
+                System.out.println();
                 System.out.println(pet.getName() + " has been fed.");
             }
         }
@@ -101,39 +128,65 @@ public class PetShelter {
     /*
      * Plays with one specific pet
      */
-    public void playWithPet() throws Exception {
-        System.out.println("Select a Pet: ");
+    public void playWithPet()throws Exception  {
+
+        System.out.println("Which pet would you like to play with? ");
         for (Pet pet : shelterAnimals.values()) {
-            findPet(input.nextLine());
-            if (pet instanceof PetLive) {
-                ((PetLive) pet).playPet();
-                System.out.println(pet.getName() + " had fun!");
-            }
+            String chosenPet = input.nextLine();
+            Pet truePet = findPet(chosenPet);
+            // if (truePet.isOrganic()) {
+                if(truePet != null){
+                ((PetLive) truePet).playPet();
+                System.out.println(truePet.getName() + " had fun!!!!");}
+                else{
+                    System.out.println("that pet does not exist");
+                    break;
+                }
+                
+                return;
+            // }else if(truePet.equals(null)){
+            //     System.out.println("Pet cannot be found.");
+            // }
+                // throw new Exception ("Pet could not be found.");
+        
         }
+
     }
 
-/*
- * Picking a cat's litter box to change
- */
-    public void cleanSingleLitter() {
+    // public void playWith() throws Exception {
+    // System.out.println("What pet would you like to play with?");
+    // String chosenPet = input.nextLine();
+    // if (shelterAnimals.containsKey(chosenPet)) {
+    // String value = shelterAnimals.get(chosenPet).playWithPet();
+    // System.out.println(value);
+    // input.nextLine();
+    // } else {
+    // throw new Exception ("That pet does not exist in the shelter.");
+    // }
+
+    // }
+
+    /*
+     * Picking a cat's litter box to change
+     */
+    public void cleanSingleLitter() throws Exception{
         System.out.println("Select a Cat");
         for (Pet pet : shelterAnimals.values()) {
-            findPet(input.nextLine()); // Make a Cat List?
+            findPet(input.nextLine()); 
             if (pet instanceof Cat) {
                 ((Cat) pet).cleanLitter();
 
             }
         }
-
     }
 
     /*
      * Picking a dog cage to clean
      */
-    public void cleanSingleCage() {
+    public void cleanSingleCage()throws Exception {
         System.out.println("Select a Dog");
         for (Pet pet : shelterAnimals.values()) {
-            findPet(input.nextLine()); // Make a Dog List?
+            findPet(input.nextLine()); 
             if (pet instanceof Dog) {
                 ((Dog) pet).cleanCage();
             }
@@ -145,19 +198,18 @@ public class PetShelter {
         for (Pet pet : shelterAnimals.values()) {
             if (pet instanceof PetLive) {
                 ((PetLive) pet).tick();
-                ((PetLive) pet).deathTick();
+                // ((PetLive) pet).deathTick();
                 if (pet instanceof Cat) {
                     ((Cat) pet).catTick();
                 } else if (pet instanceof Dog) {
                     ((Dog) pet).dogTick();
                 }
-            }
-            else if (pet instanceof PetRobot) {
-            ((PetRobot) pet).robTick();
+            } else if (pet instanceof PetRobot) {
+                ((PetRobot) pet).robTick();
             }
         }
-        Pet pet = findPet("DEAD");
-        shelterAnimals.remove(pet.getPetID());
+        // Pet pet = findPet("DEAD");
+        // shelterAnimals.remove(pet.getPetID());
 
     }
 
@@ -211,8 +263,33 @@ public class PetShelter {
     public void cleanAllPets() {
         for (Pet pet : shelterAnimals.values()) {
             if (pet instanceof PetRobot) {
-                ((PetRobot) pet).repairRobot();
+                ((PetRobot) pet).cleanRobot();
                 System.out.println(pet.getName() + " is all set.");
+            }
+        }
+    }
+
+    /*
+     * all robot pets dance
+     */
+    public void allDance() throws Exception {
+        for (Pet pet : shelterAnimals.values()) {
+            if (pet instanceof PetRobot) {
+                ((PetRobot) pet).robotDance();
+                // System.out.println(pet.getName() + " has been oiled.");
+            }
+        }
+    }
+
+    /*
+     * all robot pets shoots lasers
+     */
+    public void allLaser() {
+        for (Pet pet : shelterAnimals.values()) {
+            System.out.println("Pew-Pew, do not aim for the eyes!");
+            if (pet instanceof PetRobot) {
+                ((PetRobot) pet).robotLaser();
+                // System.out.println(pet.getName() + " has been oiled.");
             }
         }
     }

@@ -5,13 +5,17 @@ public abstract class Pet {
     private int petID;
     public String name;
     public String petDescription;
-
-    public Pet(String name, String petDescription) {
+    private boolean organic;
+    
+    public Pet(String name, String petDescription,boolean organic) {
         this.name = name;
         this.petDescription = petDescription;
         this.petID = petCounter++;
+        this.organic = organic;
     }
-
+    public boolean isOrganic(){
+        return organic;
+    }
     public String getName() {
         return name;
     }
@@ -32,6 +36,8 @@ public abstract class Pet {
         this.petDescription = petDescription;
     }
 
-
+    public void petDescription () {
+        System.out.println("Name: " + this.name + "\tDescription: " + this.petDescription + "\tID: " + this.petID);
+    }
 
 }

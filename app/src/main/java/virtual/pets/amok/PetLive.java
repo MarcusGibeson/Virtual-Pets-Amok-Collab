@@ -11,7 +11,7 @@ public class PetLive extends Pet {
     public int boredom;
 
     public PetLive(String name, String petDescription, int hunger, int thirst, int waste, int boredom) {
-        super(name, petDescription);
+        super(name, petDescription,true);
         this.hunger = hunger;
         this.waste = waste;
         this.boredom = boredom;
@@ -90,24 +90,24 @@ public class PetLive extends Pet {
         }
     }
 
-    public void deathTick() {
-        if (this.hunger >= 100) {
-            System.out.println(this.name + " has died from starvation...");
-            System.out.println("Press enter to continue");
-            input.nextLine();
-            this.name = "DEAD";
-        } else if (this.thirst >= 100) {
-            System.out.println(this.name + " has died from dehydration...");
-            System.out.println("Press enter to continue");
-            input.nextLine();
-            this.name = "DEAD";
-        } else if (this.boredom >= 100) {
-            System.out.println(this.name + " has died from dehydration...");
-            System.out.println("Press enter to continue");
-            input.nextLine();
-            this.name = "DEAD";
+    // public void deathTick() {
+    //     if (this.hunger >= 100) {
+    //         System.out.println(this.name + " has died from starvation...");
+    //         System.out.println("Press enter to continue");
+    //         input.nextLine();
+    //         this.name = "DEAD";
+    //     } else if (this.thirst >= 100) {
+    //         System.out.println(this.name + " has died from dehydration...");
+    //         System.out.println("Press enter to continue");
+    //         input.nextLine();
+    //         this.name = "DEAD";
+    //     } else if (this.boredom >= 100) {
+    //         System.out.println(this.name + " has died from dehydration...");
+    //         System.out.println("Press enter to continue");
+    //         input.nextLine();
+    //         this.name = "DEAD";
 
-        }
+    //     }
         
-    }
+    // }
 }
