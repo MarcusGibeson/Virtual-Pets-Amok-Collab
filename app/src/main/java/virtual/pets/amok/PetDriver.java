@@ -118,11 +118,12 @@ public class PetDriver {
                                                         break;
                                                 }
                                                 case "2": {
-                                                        PetShelter.oilAllPets();
+                                                        
+                                                        PetShelter.chargeAllPets();
                                                         break;
                                                 }
                                                 case "3": {
-                                                        PetShelter.chargeAllPets();
+                                                        PetShelter.oilAllPets();
                                                         break;
                                                 }
                                                 case "4": {
