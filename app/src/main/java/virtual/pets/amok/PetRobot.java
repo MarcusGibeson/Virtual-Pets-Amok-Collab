@@ -5,15 +5,15 @@ public class PetRobot extends Pet {
     private int oil;
     private int recharge;
     private int repair;
-    private int clean;
+    private int dirty;
     //
 
-    public PetRobot(String name, String petDescription, int oil, int recharge, int repair, int clean) {
+    public PetRobot(String name, String petDescription, int oil, int recharge, int repair, int dirty) {
         super(name, petDescription,false,false);
         this.oil = oil;
         this.recharge = recharge;
         this.repair = repair;
-        this.clean = clean;
+        this.dirty = dirty;
     }
 
     public int getOil() {
@@ -40,26 +40,26 @@ public class PetRobot extends Pet {
         this.repair = repair;
     }
 
-    public int getClean() {
-        return clean;
+    public int getDirty() {
+        return dirty;
     }
 
-    public void setClean(int clean) {
-        this.clean = clean;
+    public void setDirty(int dirty) {
+        this.dirty = dirty;
     }
 
     // robot pet actions
     public void oilRobot() {
-        oil += 10;
-        clean -= 5;
+        oil -= 10;
+        dirty += 5;
         System.out.println("You spilled oil on " + this.name + ".");
     }
 
     public void chargeRobot() {
-        recharge += 20;
-        repair += 4;
-        oil -= 1;
-        if (recharge > 60) {
+        recharge -= 20;
+        repair -= 4;
+        oil += 1;
+        if (recharge < 60) {
             System.out.println("Be careful not to overcharge " + this.name + ".");
         }
     }
@@ -68,30 +68,30 @@ public class PetRobot extends Pet {
         Thread.sleep(1000);
         System.out.println("Robots are syncing up. . .");
         Thread.sleep(1000);
-        recharge -= 20;
-        oil -= 25;
+        recharge += 20;
+        oil += 25;
         repair += 10;
-        clean -= 5;
+        dirty += 5;
         System.out.println("Domo Arigato Mister Roboto!");
     }
 
     public void robotLaser() {
-        recharge -= 35;
-        oil -= 15;
+        recharge += 35;
+        oil += 15;
         repair += 10;
         // System.out.println("Pew-Pew, do not aim for the eyes!");
     }
 
     // repair and clean methods
     public void repairRobot() {
-        oil = 75;
-        repair = 75;
+        oil = 25;
+        repair = 25;
         System.out.println("Would you like to apply for a warranty?");
     }
 
     public void cleanRobot() {
-        recharge = 75;
-        clean = 75;
+        recharge = 25;
+        dirty = 25;
         System.out.println("It has the new car smell! ");
     }
 
@@ -99,18 +99,18 @@ public class PetRobot extends Pet {
     public void robTick() {
         this.recharge -= 4;
         this.oil -= 2;
-        this.clean -= 7;
+        this.dirty -= 7;
 
-        if (this.oil <= 15) {
+        if (this.oil >= 85) {
             System.out.println(this.name + " System Alert: Low oil Detected!");
         }
-        if (this.recharge <= 5) {
+        if (this.recharge >= 85) {
             System.out.println(this.name + " System Alert : Low Battery, Please Charge!");
         }
         if (this.repair >= 85) {
             System.out.println(this.name + " System Alert : Malfunction Detected!");
         }
-        if (this.clean <= 10) {
+        if (this.dirty >= 80) {
             System.out.println(this.name + " System Alert : Sensor Block Detected!");
         }
 
@@ -119,7 +119,7 @@ public class PetRobot extends Pet {
     @Override
     public String toString() {
         return "\nName: " + this.name + "\tOil " + this.oil + " / 100 " + "\tBattery: " + this.recharge + " / 100 "
-                + "\tDamage: " + this.repair + " / 100 " + "\n\t\tCleanliness: " + this.clean + " / 100";
+                + "\tDamage: " + this.repair + " / 100 " + "\n\t\tCleanliness: " + this.dirty + " / 100";
     }
 
     // public void deathRobotTick() {
