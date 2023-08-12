@@ -24,7 +24,7 @@ public class Cat extends PetLive {
     }
 
     public void useLitterBox() {
-        if (this.waste >= 20) {
+        if (this.waste >= 25) {
             this.waste = 0;
             this.poopInBox++;
             System.out.println(this.name + " just used the litter box.");
@@ -59,7 +59,7 @@ public class Cat extends PetLive {
     @Override
     public String toString() {
         return "\nName: " + this.name + "\tHunger: " + this.hunger + " / 100 " + "\tThirst: " + this.thirst + " / 100 "
-                + "\tBoredom: " + this.boredom + " / 100 " + "\n\t\tLitter box dirty? " + this.litterBox + "\t\t waste "
+                + "\tBoredom: " + this.boredom + " / 100 " + "\n\t\tLitter box dirty? " + this.litterBox + "\t\t Waste "
                 + this.waste;
     }
 }

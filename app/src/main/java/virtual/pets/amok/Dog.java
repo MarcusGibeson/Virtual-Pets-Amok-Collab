@@ -23,7 +23,7 @@ public class Dog extends PetLive {
     }
 
     public void useCage() {
-        if (this.waste >= 20) {
+        if (this.waste >= 25) {
             this.waste = 0;
             this.poopInCage++;
             System.out.println(this.name + " just pooped in their cage.");
@@ -58,6 +58,7 @@ public class Dog extends PetLive {
     @Override
     public String toString() {
         return "\nName: " + this.name + "\tHunger: " + this.hunger + " / 100 " + "\tThirst: " + this.thirst + " / 100 "
-                + "\tBoredom: " + this.boredom + " / 100 " + "\n\t\tCage dirty? " + this.dirtyCage;
+                + "\tBoredom: " + this.boredom + " / 100 " + "\n\t\tCage dirty? " + this.dirtyCage+ "\t\t Waste "
+                + this.waste;
     }
 }
