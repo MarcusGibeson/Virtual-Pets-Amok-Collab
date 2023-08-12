@@ -81,7 +81,7 @@ public class PetLive extends Pet {
             System.out.println("Press enter to continue");
             input.nextLine();
         } else {
-            this.hunger += 10;
+            this.hunger += 2;
         }
         if (this.thirst >= 100) {
             this.thirst = 100;
@@ -89,7 +89,7 @@ public class PetLive extends Pet {
             System.out.println("Press enter to continue");
             input.nextLine();
         } else {
-            this.thirst += 10;
+            this.thirst += 2;
         }
         if (this.boredom >= 100) {
             this.boredom = 100;
@@ -97,7 +97,7 @@ public class PetLive extends Pet {
             System.out.println("Press enter to continue");
             input.nextLine();
         } else {
-            this.boredom += 10;
+            this.boredom += 2;
         }
     }
 
