@@ -34,6 +34,7 @@ public class Dog extends PetLive {
         
         if (this.dirtyCage = true) {
             this.poopInCage = 0;
+            this.dirtyCage = false;
             System.out.println(this.name + "'s cage is now clean!");
         } else {
             System.out.println(this.name + "'s cage doesn't need to be cleaned right now.");
