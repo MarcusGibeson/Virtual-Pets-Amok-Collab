@@ -22,10 +22,10 @@ public class PetDriver {
                 /*
                  * Creates starting pets in shelter (1 of each)
                  */
-                PetRobot Robodog = new PetRobot("Robodog", "A robot dog", 25, 25, 25, 25);
-                PetRobot Meowotron = new PetRobot("Meowotron", "A robot cat", 25, 25, 25, 125);
-                Dog Spot = new Dog("Spot", "A white dog with a brown spot", 20, 20, 20, 20, false);
-                Cat DonFluffles = new Cat("Don Fluffles", "Fluffiest cat ever", 20, 20, 20, 20, false);
+                PetRobot Robodog = new PetRobot("Robodog", "A robot dog", 5, 5, 5, 5);
+                PetRobot Meowotron = new PetRobot("Meowotron", "A robot cat", 5, 5, 5, 5);
+                Dog Spot = new Dog("Spot", "A white dog with a brown spot", 2, 2, 2, 2, false);
+                Cat DonFluffles = new Cat("Don Fluffles", "Fluffiest cat ever", 2, 2, 2, 2, false);
 
                 PetShelter.addPet(Robodog);
                 PetShelter.addPet(Meowotron);
@@ -33,9 +33,10 @@ public class PetDriver {
                 PetShelter.addPet(DonFluffles);
 
                 while (!exitGameLoop) {
-                        String option = menu.mainMenu();
-                        PetShelter.showAllPets();
                         PetShelter.tickAll();
+                        PetShelter.showAllPets();
+                        String option = menu.mainMenu();
+                        
 
                         switch (option) {
 
