@@ -125,28 +125,22 @@ public class PetShelter {
     /*
      * Plays with one specific pet
      */
-    public void playWithPet() throws Exception {
+ public void playWithPet() throws Exception {
 
         System.out.println("Which pet would you like to play with? ");
         for (Pet pet : shelterAnimals.values()) {
             String chosenPet = input.nextLine();
             Pet truePet = findPet(chosenPet);
-            // if (truePet.isOrganic()) {
+            if (truePet.isOrganic()) {
             if (truePet != null) {
                 ((PetLive) truePet).playPet();
                 System.out.println(truePet.getName() + " had fun!!!!");
-            } else {
-                System.out.println("that pet does not exist");
-
-            }
-
+            } 
             return;
-            // }else if(truePet.equals(null)){
-            // System.out.println("Pet cannot be found.");
-            // }
-            // throw new Exception ("Pet could not be found.");
-
         }
+        return;
+        }
+        return;
 
     }
 
