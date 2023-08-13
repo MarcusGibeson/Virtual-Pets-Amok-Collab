@@ -35,6 +35,7 @@ public class Cat extends PetLive {
         if(feline){
         if (this.litterBox = true) {
             this.poopInBox = 0;
+            this.litterBox = false;
             System.out.println(this.name + "'s litter box is now clean.");
         } else {
             System.out.println(this.name + "'s litter box doesn't need to be cleaned right now.");
